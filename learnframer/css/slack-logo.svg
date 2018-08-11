@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>slack-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-copy-2" transform="translate(-4.000000, -4.000000)" fill="#4E5E68">
+            <g id="slack-logo" transform="translate(4.320000, 4.320000)">
+                <path d="M4.97379915e-14,2.87283817 C4.97379915e-14,1.28621346 1.28837528,-9.00886497e-15 2.88,-8.8817842e-15 L2.88,-8.8817842e-15 L7.2,17.28 L2.88702936,17.28 C1.29256707,17.28 4.97379915e-14,15.9811915 4.97379915e-14,14.4071618 L4.97379915e-14,2.87283817 Z" id="Mask" opacity="0.149999991"></path>
+                <path d="M10.08,2.87283817 C10.08,1.28621346 11.3683753,-6.18157152e-15 12.96,-8.8817842e-15 L12.96,-8.8817842e-15 L17.28,17.28 L12.9670294,17.28 C11.3725671,17.28 10.08,15.9811915 10.08,14.4071618 L10.08,2.87283817 Z" id="Mask" opacity="0.149999991" transform="translate(13.680000, 8.640000) rotate(180.000000) translate(-13.680000, -8.640000) "></path>
+                <path d="M5.04,-2.16716183 C5.04,-3.75378654 6.32837528,-5.04 7.92,-5.04 L7.92,-5.04 L12.24,12.24 L7.92702936,12.24 C6.33256707,12.24 5.04,10.9411915 5.04,9.36716183 L5.04,-2.16716183 Z" id="Mask" opacity="0.400000006" transform="translate(8.640000, 3.600000) rotate(90.000000) translate(-8.640000, -3.600000) "></path>
+                <path d="M5.04,7.91283817 C5.04,6.32621346 6.32837528,5.04 7.92,5.04 L7.92,5.04 L12.24,22.32 L7.92702936,22.32 C6.33256707,22.32 5.04,21.0211915 5.04,19.4471618 L5.04,7.91283817 Z" id="Mask" opacity="0.400000006" transform="translate(8.640000, 13.680000) rotate(270.000000) translate(-8.640000, -13.680000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

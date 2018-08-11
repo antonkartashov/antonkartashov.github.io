@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="alternate" href="http://learnframer.ru/feed.xml" type="application/rss+xml" title="Блог о прототипировании интерактивных продуктов">
+    <title>Основы  CoffeeScript во&nbsp;Framer — Learn Framer
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,800italic,700italic,700,600italic,600,400italic,300italic,300&amp;subset=latin,cyrillic,cyrillic-ext,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700&amp;subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">	
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="/">Learn Framer</a></li>
+        <li>
+          <nobr><a href="http://learnframer.ru/slack">Слэк</a><span class="dot"> &nbsp; </span><a href="https://www.facebook.com/groups/prototypingclub/" target="_blank">Фейсбук</a></nobr>
+        </li>
+      </ul>
+    </header>
+    <div class="content">
+      <h1>Основы  CoffeeScript во&nbsp;Framer</h1><small><span><a href="http://facebook.com/antonkartashov" target="_blank">Антон Карташов</a></span><span class="dot"> •</span><span><a href="/articles/basics/">
+                  <time datetime="2016-03-18T04:00:00+03:00" title="Fri Mar 18 2016 04:00:00 GMT+0300">18 марта&nbsp;2016</time></a></span></small>
+      <article><p>Без основ программирования овладеть Фреймером сложно: непонятны ни документация, ни чужие примеры; постоянные ошибки исправляются долго; а код не ощущается как удобный и послушный инструмент. Основы не так сложны, как может показаться.</p>
+<hr>
+<p>Простейшая программа может выглядеть так:</p>
+<pre><code class="lang-CoffeeScript"><span class="number">2</span> + <span class="number">2</span>
+</code></pre>
+<p>Результат вычислений обычно сохраняют в <em>переменную</em>, чтобы использовать его позже:</p>
+<pre><code class="lang-CoffeeScript">a = <span class="number">2</span> + <span class="number">2</span>
+</code></pre>
+<p>Чтобы просмотреть содержимое переменной, есть команда <code>print()</code>:</p>
+<pre><code class="lang-CoffeeScript">a = <span class="number">2</span> + <span class="number">2</span>
+<span class="built_in">print</span>(a)
+<span class="comment"># » 4</span>
+</code></pre>
+<p><img src="/articles/basics/print.png" alt="print">
+<small>Содержимое <code>print()</code> выводится справа снизу — во всплывающем белом окне.</small></p>
+<p>Чтобы вывести результат вычислений, не обязательно сохранять его в переменную. Можно сразу написать внутри команды <code>print()</code>:</p>
+<pre><code class="lang-CoffeeScript"><span class="built_in">print</span>(<span class="number">5</span> * <span class="number">10</span> + <span class="number">2</span>)
+<span class="comment"># » 52</span>
+</code></pre>
+<hr>
+<p>Текст в отличие от чисел берут в кавычки (чтобы компьютер мог отличать имена переменных от значений):</p>
+<pre><code class="lang-CoffeeScript">hello = <span class="string">'bye'</span>
+
+b =  hello
+c = <span class="string">'hello'</span>
+
+<span class="built_in">print</span>(b) <span class="comment"># » "bye"</span>
+<span class="built_in">print</span>(c) <span class="comment"># » "hello"</span>
+</code></pre>
+<p>Еще есть зарезервированные слова <code>true</code> и <code>false</code>, чтобы хранить результаты сравнений. Например, «1 &gt; 3» — это ложь, а «10 &gt; 3» — правда:</p>
+<pre><code class="lang-CoffeeScript"><span class="built_in">print</span>(<span class="number">1</span> &gt; <span class="number">3</span>)
+<span class="comment"># » false</span>
+
+<span class="built_in">print</span>(<span class="number">10</span> &gt; <span class="number">3</span>)
+<span class="comment"># » true</span>
+</code></pre>
+<p>Когда мы их используем, кавычки не нужны — <code>true</code> и <code>false</code> не являются текстом. Их тип данных — логика.</p>
+<pre><code class="lang-CoffeeScript">a = <span class="literal">true</span>
+b = <span class="literal">false</span>
+</code></pre>
+<hr>
+<h2 id="-">Условия</h2>
+<p>Код может выполняться не только по порядку строка за строкой. Используя сравнения, мы можем попросить программу выбрать один из двух (или более) возможных вариантов:</p>
+<pre><code class="lang-CoffeeScript">b = <span class="number">3</span>
+
+<span class="keyword">if</span> b &lt; <span class="number">2</span> 
+    <span class="built_in">print</span> <span class="string">'Less than two'</span>
+<span class="keyword">else</span> 
+    <span class="built_in">print</span> <span class="string">'Greater than or equal to two'</span>
+
+<span class="comment"># » "Greater than or equal to two"</span>
+</code></pre>
+<h5 id="-coffeescript-">Неправильные отступы в  CoffeeScript считаются ошибкой. С их помощью мы показываем вложенность блоков. В других языках эту функцию выполняют скобки, а отступы расставляют для лучшей читаемости кода.</h5>
+<p>Так, например, выглядят условия на JavaScript:</p>
+<pre><code class="lang-JavaScript"><span class="comment">/* JavaScript */</span>
+<span class="keyword">if</span> (b &lt; <span class="number">2</span>) {
+    print(<span class="string">'Less than two'</span>);
+} <span class="keyword">else</span> {
+    print(<span class="string">'Greater than or equal to two'</span>);    
+}
+</code></pre>
+<hr>
+<h2 id="-">Циклы</h2>
+<p>Еще один способ выполнять код не по порядку — зациклить какую-то его часть на некоторое время. Представьте, что нам нужно вывести все четные числа от 0 до 20:</p>
+<pre><code class="lang-CoffeeScript"><span class="built_in">print</span>(<span class="number">0</span>)
+<span class="built_in">print</span>(<span class="number">2</span>)
+<span class="built_in">print</span>(<span class="number">4</span>)
+<span class="built_in">print</span>(<span class="number">6</span>)
+<span class="built_in">print</span>(<span class="number">8</span>)
+<span class="built_in">print</span>(<span class="number">10</span>)
+<span class="built_in">print</span>(<span class="number">12</span>)
+<span class="built_in">print</span>(<span class="number">14</span>)
+<span class="built_in">print</span>(<span class="number">16</span>)
+<span class="built_in">print</span>(<span class="number">18</span>)
+<span class="built_in">print</span>(<span class="number">20</span>)
+</code></pre>
+<p>С помощью циклов это выполняется гораздо проще:</p>
+<pre><code class="lang-CoffeeScript"><span class="keyword">for</span> x <span class="keyword">in</span> [<span class="number">0.</span><span class="number">.10</span>]
+    <span class="built_in">print</span>(x * <span class="number">2</span>)
+</code></pre>
+<p>Такой код позволит быстро вывести даже четные числа от 0 до 2000. </p>
+<p>К тому же с циклами быстрее вносить правки: в примере выше достаточно изменить одну строчку. А в предыдущем ему пришлось бы править весь код.</p>
+<hr>
+<h2 id="-">Функции</h2>
+<p>Внутри программы можно создать подпрограмму — <em>функцию</em>; дать ей любое имя и вызывать в разных частях прототипа:</p>
+<pre><code class="lang-CoffeeScript"><span class="function"><span class="title">sum</span> = <span class="params">(x, y)</span> -&gt;</span>
+    x + y
+</code></pre>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>summa</code></td>
+<td>имя функции</td>
+</tr>
+<tr>
+<td><code>x, y</code></td>
+<td>параметры</td>
+</tr>
+<tr>
+<td><code>–&gt;</code></td>
+<td>заменяет слово <code>function</code></td>
+</tr>
+</tbody>
+</table>
+<p>Код внутри <code>-&gt;</code> не выполняется, пока мы его не вызовем с какими-то параметрами. Параметры можно вводить каждый раз разные: </p>
+<pre><code class="lang-CoffeeScript"><span class="comment"># Объявление функции</span>
+<span class="function"><span class="title">sum</span> = <span class="params">(x, y)</span> -&gt;</span>
+    x + y
+
+<span class="comment"># Вызов функции</span>
+a = sum(<span class="number">2</span>, <span class="number">2</span>)       
+b = sum(<span class="number">5</span> + <span class="number">5</span>, <span class="number">20</span>)
+c = sum(a, b)
+
+<span class="built_in">print</span> a, b, c
+<span class="comment"># » 4, 30, 34</span>
+</code></pre>
+<p>Кстати, <code>print()</code> — это тоже функция:</p>
+<pre><code class="lang-CoffeeScript"><span class="built_in">print</span>(a)
+</code></pre>
+<p>Функция может быть без параметров. Тогда при ее вызове мы пишем пустые скобки (опять же, чтобы показать, что это запуск функции, а не переменная):</p>
+<pre><code class="lang-CoffeeScript">x = <span class="number">2</span>
+y = <span class="number">3</span>
+<span class="function">
+<span class="title">prod</span> = -&gt;</span>
+    x * y
+
+z = prod()
+<span class="built_in">print</span> z
+<span class="comment"># » 6</span>
+</code></pre>
+<h5 id="coffeescript-">CoffeeScript позволяет не ставить скобки при вызове функций, если это не вызывает разночтений.</h5>
+<p>Но если у функции нет ни одного параметра, то скобки убирать нельзя:</p>
+<pre><code class="lang-CoffeeScript">sum x, y
+<span class="built_in">print</span> <span class="string">"Hello world"</span>
+<span class="built_in">print</span> x
+
+prod()
+</code></pre>
+<p>Также функции бывают <em>анонимными</em>:</p>
+<pre><code class="lang-CoffeeScript">-&gt;
+    x + y
+</code></pre>
+<p>Их используют, чтобы передавать в качестве параметров в другие функции либо в объекты.</p>
+<hr>
+<h2 id="-">Объекты</h2>
+<p>Если говорить грубо, то объект — это набор переменных, объединенных одним именем. Создание объекта выглядит так:</p>
+<pre><code class="lang-CoffeeScript">designer = 
+    <span class="attribute">name</span>:  <span class="string">'Anton'</span>
+    <span class="attribute">city</span>:  <span class="string">'Moscow'</span>
+    <span class="attribute">age</span>:    <span class="number">29</span>
+</code></pre>
+<p>Переменные внутри объекта называются <em>свойствами</em>. </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>designer</code></td>
+<td>объект</td>
+</tr>
+<tr>
+<td><code>name</code>, <code>age</code>, <code>city</code></td>
+<td>свойства объекта</td>
+</tr>
+</tbody>
+</table>
+<h5 id="-">Чтобы при создании нового объекта присвоить значения его свойствам, используют двоеточие, а не знак равенства.</h5>
+<p>Теперь мы можем обращаться к свойствам объекта так:</p>
+<pre><code class="lang-CoffeeScript"><span class="built_in">print</span> designer.name
+year = <span class="number">2016</span> - designer.age
+designer.city = <span class="string">'St. Petersburg'</span>
+</code></pre>
+<p>Помимо свойств у объектов могут быть свои функции. Их называют <em>методами</em>. Чтобы создать метод, присвойте одному из свойств анонимную функцию:</p>
+<pre><code class="lang-CoffeeScript">designer
+    <span class="attribute">name</span>: <span class="string">'Anton'</span>
+    <span class="attribute">age</span>: <span class="number">29</span>
+    <span class="attribute">sayHello</span>: <span class="function">-&gt;</span>
+        <span class="built_in">print</span> <span class="string">'Hello!'</span>
+
+designer.sayHello()
+</code></pre>
+<p>В работе над прототипами мы чаще будем работать с методами, чем с простыми функциями:</p>
+<pre><code class="lang-CoffeeScript">layerA.center()
+layerA.placeBehind(layerB)
+layerA.animate(<span class="attribute">x</span>: <span class="number">200</span>, <span class="attribute">opacity</span>: <span class="number">0</span>)
+layerA.onClick(<span class="function">-&gt;</span> layerA.x = <span class="number">0</span>)
+</code></pre>
+<p>Параметры методов тоже можно не брать в скобки, если это не вызывает разночтений. Если параметры отсутствуют, то скобки обязательны:</p>
+<pre><code class="lang-CoffeeScript">layerA.center()
+layerA.placeBehind layerB
+layerA.animate <span class="attribute">x</span>: <span class="number">200</span>, <span class="attribute">opacity</span>: <span class="number">0</span>
+layerA.onClick -&gt; layerA.x = <span class="number">0</span>
+</code></pre>
+<p>Методы <code>.animate()</code> и <code>.onClick()</code> еще разберем ниже.</p>
+<hr>
+<h2 id="-">Конструкторы и компоненты</h2>
+<p>Конструкторы довольно сложная тема, а в прототипировании их используют нечасто. Поэтому просто пробежимся по ним, чтобы иметь представление.</p>
+<p>Чтобы не пересобирать каждый раз однотипные объекты с одними и теми же свойствами, в JavaScript существуют <em>конструкторы</em> — шаблоны заранее настроенных объектов. Конструктор выглядит как обычная  функция:</p>
+<pre><code class="lang-CoffeeScript"><span class="function"><span class="title">Car</span> = -&gt;</span>
+    <span class="keyword">this</span>.name  = <span class="string">'BMW'</span>
+    <span class="keyword">this</span>.color = <span class="string">'black'</span>
+    <span class="keyword">this</span>.speed =  <span class="number">220</span>
+</code></pre>
+<p>Теперь достаточно написать одну фразу <code>new Car</code>:</p>
+<pre><code class="lang-CoffeeScript">myCar = <span class="keyword">new</span> Car
+</code></pre>
+<p>…и у нас появится новый объект с уже заполненными свойствами:</p>
+<pre><code class="lang-CoffeeScript"><span class="built_in">print</span> myCar.name
+<span class="built_in">print</span> myCar.color
+<span class="built_in">print</span> myCar.speed
+<span class="comment"># » "BMW"</span>
+<span class="comment"># » "black"</span>
+<span class="comment"># » 220</span>
+</code></pre>
+<p>Конструкторы нужны, чтобы писать свои собственные компоненты и модули. В них можно предусмотреть количество и тип параметров, дать каждому свойству имя, настроить значения по умолчанию. </p>
+<pre><code class="lang-CoffeeScript"><span class="function"><span class="title">Student</span> = <span class="params">(obj)</span> -&gt;</span> 
+    <span class="keyword">this</span>.name = obj.name ? <span class="string">'Ivan'</span>
+    <span class="keyword">this</span>.age  = obj.age  ?  <span class="number">17</span>
+    <span class="keyword">this</span>.city = obj.city ? <span class="string">'Moscow'</span>
+</code></pre>
+<p>Этот код достаточно сложный для новичков, но тут можно увидеть следующее: конструктор проверяет наличие введеных параметров (<code>name ?</code>, <code>age ?</code>, <code>city ?</code>) и если они отсутствуют, то сам заполняет их значениями по умолчанию (<code>&#39;Ivan&#39;</code>, <code>17</code>, <code>&#39;Moscow&#39;</code>).</p>
+<p>Теперь мы можем создавать объект с большей гибкостью. Например, задать самостоятельно два свойства, а остальные оставить на совести конструктора:</p>
+<pre><code class="lang-CoffeeScript">developer = <span class="keyword">new</span> Student
+    <span class="attribute">age</span>:   <span class="number">19</span>
+    <span class="attribute">name</span>: <span class="string">'Egor'</span>
+
+<span class="built_in">print</span> developer.name
+<span class="built_in">print</span> developer.age
+<span class="built_in">print</span> developer.city
+<span class="comment"># » "Egor"</span>
+<span class="comment"># » 19</span>
+<span class="comment"># » "Moscow"</span>
+</code></pre>
+<p>Во Framer.js есть 6 типов компонентов, на основе которых создаются все прототипы:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Слои</td>
+<td>Layer</td>
+</tr>
+<tr>
+<td>2. Фоны</td>
+<td>BackgroundLayer</td>
+</tr>
+<tr>
+<td>3. Скрол</td>
+<td>ScrollComponent</td>
+</tr>
+<tr>
+<td>4. Пэйджинг</td>
+<td>PageComponent</td>
+</tr>
+<tr>
+<td>5. Слайдеры</td>
+<td>SliderComponent</td>
+</tr>
+<tr>
+<td>6. Видео</td>
+<td>VideoLayer</td>
+</tr>
+</tbody>
+</table>
+<p>Например, для объекта Layer создатели Framer.js настроли более 100 свойств и методов, позволяющих вставлять изобржения, обрабатывать <nobr>драг-н-дроп,</nobr> вращать слои в 3D и т.д. Использование компонентов ускоряет работу, но без потери гибкости: мы можем менять любые свойства или добавлять свои.</p>
+<p>Для создания слоя используют оператор <code>new</code>:</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="keyword">new</span> Layer
+</code></pre>
+<p>По умолчанию Layer создает полупрозрачный синий квадрат размером 100×100 пикселей и размещает его по координате (0, 0) — в левом верхнем углу телефона.</p>
+<p><img src="/articles/basics/newLayer.png" alt="new Layer"></p>
+<p>Попробуем вывести значения свойств, которые мы не задавали:</p>
+<pre><code class="lang-CoffeeScript">layerA = <span class="keyword">new</span> Layer 
+
+<span class="built_in">print</span> layerA.opacity
+<span class="built_in">print</span> layerA.width
+<span class="comment"># » 1</span>
+<span class="comment"># » 100</span>
+</code></pre>
+<hr>
+<h2 id="-">Анимация — это функция</h2>
+<p>Мы уже разобрали функции и методы. Одни из самых используемых методов объекта Layer — это анимации. <code>animate()</code> — сложная функция. </p>
+<pre><code class="lang-CoffeeScript">layerA.animate(<span class="attribute">x</span>: <span class="number">200</span>, <span class="attribute">y</span>: <span class="number">400</span>, <span class="attribute">options</span>: {<span class="attribute">time</span>: <span class="number">0.5</span>, <span class="attribute">curve</span>: <span class="string">"ease-in"</span>})
+</code></pre>
+<p>CoffeeScript позволяет записать эту функцию так:</p>
+<pre><code class="lang-CoffeeScript">layerA.animate
+    <span class="attribute">x</span>: <span class="number">200</span>
+    <span class="attribute">y</span>: <span class="number">400</span>
+    <span class="attribute">options</span>:
+        <span class="attribute">time</span>: <span class="number">0.5</span>
+        <span class="attribute">curve</span>: <span class="string">"ease-in"</span>
+</code></pre>
+<hr>
+<h2 id="-">События</h2>
+<p>Чтобы сделать прототип интерактивным, под каждое действие пользователя (клик, скрол, долгое нажатие) пишут свою функцию. Прототип начнет ежесекундно проверять, совершил ли пользователь действие и запускать в ответ на него подпрограмму. </p>
+<p>Действия пользователя называют <em>событиями</em>, а функцию, срабатывающую в ответ — <em>колбэком</em> или <em>обработчиком события</em>. Событие работает как обычный метод:</p>
+<pre><code class="lang-CoffeeScript">layerA.onClick(functionA)
+</code></pre>
+<p>Например, сделаем по клику слой красным:</p>
+<pre><code class="lang-CoffeeScript"><span class="comment"># Колбэк</span>
+<span class="function"><span class="title">makeRed</span> = -&gt;</span>
+    layerA.backgroundColor = <span class="string">"red"</span>
+
+<span class="comment"># Событие</span>
+layerA.onClick(makeRed)
+</code></pre>
+<p>Колбэк можно не брать в скобки:</p>
+<pre><code class="lang-CoffeeScript">layerA.onClick makeRed
+</code></pre>
+<p>Зачастую колбэкам не нужно никакого имени, ведь в коде мы используем его только один раз — чтобы передать внутрь события. Код можно сократить, если использовать в качестве колбэка анонимную функцию:</p>
+<pre><code class="lang-CoffeeScript">layerA.onClick(<span class="function">-&gt;</span> layerA.backgroundColor = <span class="string">"red"</span>)
+</code></pre>
+<p>А без скобок:</p>
+<pre><code class="lang-CoffeeScript">layerA.onClick -&gt; layerA.backgroundColor = <span class="string">"red"</span>
+
+layerA.onClick -&gt; 
+    layerA.backgroundColor = <span class="string">"red"</span>
+</code></pre>
+<p><img src="/articles/basics/exercise.png" alt="">
+<small>myFirstPrototype.framer</small></p>
+</article>
+      <div class="comments">
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+          	this.page.url = page.title;
+          	this.page.identifier = page.title;
+          };
+          (function() {
+          	var d = document, s = d.createElement('script');
+          	s.src = '//framer-russia.disqus.com/embed.js';
+          	s.setAttribute('data-timestamp', +new Date());
+          	(d.head || d.body).appendChild(s);
+          })();
+          
+        </script>
+        <noscript>
+          <p>please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></p>
+        </noscript>
+      </div>
+    </div>
+    <footer>
+      <p><small>&copy; 2016 <a href="https://www.facebook.com/groups/prototypingclub/" target="_blank">Антон Карташов</a>. Блог работает на <a href="https://github.com/jnordberg/wintersmith" target="_blank">Винтерсмите</a></small></p>
+    </footer>
+    <script type="text/javascript">
+      (function (d, w, c) {
+      	(w[c] = w[c] || []).push(function() {
+      	try {
+      	w.yaCounter36023145 = new Ya.Metrika({
+      		id: 36023145,
+      		clickmap: true,
+      		trackLinks: true,
+      		accurateTrackBounce: true
+      	});
+      	} catch(e) { }
+      	});
+      
+      	var n = d.getElementsByTagName("script")[0],
+      		s = d.createElement("script"),
+      		f = function () {n.parentNode.insertBefore(s, n);};
+      		s.type = "text/javascript";
+      	
+      	s.async = true;
+      	s.src = "https://mc.yandex.ru/metrika/watch.js";
+      	
+      	if (w.opera == "[object Opera]") {
+      		d.addEventListener("DOMContentLoaded", f, false);
+      	} else {f();}
+      })(document, window, "yandex_metrika_callbacks");
+    </script>
+  </body>
+</html>

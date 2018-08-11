@@ -1,0 +1,63 @@
+pre {
+  background: #f9f8f8;
+}
+pre code {
+  display: block;
+  color: #fff;
+  color: rgba(0,0,0,0.8);
+}
+p code {
+  position: relative;
+  white-space: nowrap;
+}
+.property {
+  color: #6cbde2;
+  color: #1e7197;
+}
+.comment {
+  color: rgba(98,98,102,0.6);
+}
+.atom,
+.def,
+.keyword,
+.literal {
+  color: #fdc13f;
+  color: #ed7702;
+}
+.number {
+  color: #a488ed;
+  color: #391693;
+  opacity: 0.8;
+}
+.operator {
+  color: #f762aa;
+  color: #b7095d;
+}
+.string {
+  color: #a0e35f;
+  color: #6dbb21;
+}
+code.lang-markdown {
+  color: #424242;
+  color: #000;
+}
+code.lang-markdown .header,
+code.lang-markdown .strong {
+  font-weight: bold;
+}
+code.lang-markdown .emphasis {
+  font-style: italic;
+}
+code.lang-markdown .horizontal_rule,
+code.lang-markdown .link_label,
+code.lang-markdown .code,
+code.lang-markdown .header,
+code.lang-markdown .link_url {
+  color: #555;
+  color: #080808;
+}
+code.lang-markdown .blockquote,
+code.lang-markdown .bullet {
+  color: #bbb;
+  color: #6e6e6e;
+}

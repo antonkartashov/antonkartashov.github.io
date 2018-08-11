@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="alternate" href="http://learnframer.ru/feed.xml" type="application/rss+xml" title="Блог о прототипировании интерактивных продуктов">
+    <title>Публикация проекта <nobr>на GitHub Pages</nobr> — Learn Framer
+    </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,800italic,700italic,700,600italic,600,400italic,300italic,300&amp;subset=latin,cyrillic,cyrillic-ext,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700&amp;subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">	
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="/">Learn Framer</a></li>
+        <li>
+          <nobr><a href="http://learnframer.ru/slack">Слэк</a><span class="dot"> &nbsp; </span><a href="https://www.facebook.com/groups/prototypingclub/" target="_blank">Фейсбук</a></nobr>
+        </li>
+      </ul>
+    </header>
+    <div class="content">
+      <h1>Публикация проекта <nobr>на GitHub Pages</nobr></h1><small><span><a href="http://facebook.com/antonkartashov" target="_blank">Антон Карташов</a></span><span class="dot"> •</span><span><a href="/articles/github-pages/">
+                  <time datetime="2016-11-25T08:00:00+03:00" title="Fri Nov 25 2016 08:00:00 GMT+0300">25 ноября&nbsp;2016</time></a></span></small>
+      <article><p>Все подписчики Framer Studio получают безлимитный хостинг на share.framerjs.com для публикации прототипов. Если же вы работаете через редактор кода (например, Атом), то публиковать проекты вам придется самостоятельно.</p>
+<hr>
+<p><img src="/articles/github-pages/github-desktop.png" alt="GitHub Desktop"></p>
+<p>Проблема решается двумя способами:</p>
+<ol>
+<li>Свой хостинг. У многих дизайнеров есть свой сайт и они умеют работать с FTP-клиентами.</li>
+<li>GitHub Pages. Расскажу про него подробнее.</li>
+</ol>
+<h2 id="github-pages">Github Pages</h2>
+<p>Все пользователи github.com получают безлимитный хостинг для публикации проектов.
+Для тех, кто не умеет работать с git и командной строкой, есть приложение <a href="http://desktop.github.com">GitHub Desktop</a> (для Мака и Виндоус) с визуальным интерфейсом:</p>
+<p><img src="/articles/github-pages/01-github-desktop.png" alt="GitHub Desktop">
+<small><a href="http://desktop.github.com">GitHub Desktop</a> на Маке</small></p>
+<p>Если в двух словах, то вы связываете папку на своем компьютере с репозиторием на GitHub. В эту папку складываете проект и нажимаете кнопку Commit. Прототип тут же публикуется на сайте <a href="/articles/github-pages/github.io">github.io</a>.</p>
+<h4 id="-">Пошаговая инструцкия</h4>
+<ol>
+<li>Создайте аккаунт на <a href="http://github.com">http://github.com</a>.</li>
+<li>Установите приложение <a href="http://desktop.github.com">GitHub Desktop</a>.</li>
+<li>В приложении в левом верхнем углу нажмите плюсик и настройте первый и последний репозиторий: <br />— Из трех вкладок выбираем Create. <br />— Name — должно быть username.github.io, где username – ваш логин на Гитхабе.<br />— Local Path — выбираем, где на компе будет лежать папка с вашими проектами.</li>
+<li>Идем в созданную папку. Складываем туда хотя бы один проект. Например, структура папок может быть такая: <em>~ / desktop / username.github.io / myFirstProject.framer</em></li>
+<li>Возвращаемся в приложение и находим там снизу панельку с кнопкой Commit &amp; Sync:
+В поле Summary нужно вписать хотя бы один символ (так устроен git — нельзя публиковать изменение без единого комментария).
+Нажимаем кнопку <strong>Commit &amp; Sync</strong>.</li>
+<li>Спустя 2–3 минуты ваш прототип заработает по адресу:</li>
+</ol>
+<pre><code>http://username.github.io/myFirstproject.framer
+</code></pre><h4 id="-">Пример</h4>
+<ul>
+<li>Мой логин на Гитхабе <a href="http://github.com/antonkartashov">antonkartashov</a>. </li>
+<li>Через приложение я создал репозиторий и папку <em>antonkartashov.github.io</em>.</li>
+<li>Прототип назывался <em>randomuser-api.framer</em>.</li>
+<li>Я скопировал его в папку <em>antonkartashov.github.io</em> на компе и в приложении нажал Commit &amp; Sync. </li>
+</ul>
+<p>Получился адрес: </p>
+<pre><code>http://antonkartashov.github.io/randomuser-api.framer/
+</code></pre><hr>
+<p>Выражаю благодарность <a href="https://www.facebook.com/alexander.sergievskiy">Александру Сергиевскому</a>, который открыл мне этот хак с <em>username.github.io</em>.</p>
+</article>
+      <div class="comments">
+        <div id="disqus_thread"></div>
+        <script>
+          var disqus_config = function () {
+          	this.page.url = page.title;
+          	this.page.identifier = page.title;
+          };
+          (function() {
+          	var d = document, s = d.createElement('script');
+          	s.src = '//framer-russia.disqus.com/embed.js';
+          	s.setAttribute('data-timestamp', +new Date());
+          	(d.head || d.body).appendChild(s);
+          })();
+          
+        </script>
+        <noscript>
+          <p>please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></p>
+        </noscript>
+      </div>
+    </div>
+    <footer>
+      <p><small>&copy; 2016 <a href="https://www.facebook.com/groups/prototypingclub/" target="_blank">Антон Карташов</a>. Блог работает на <a href="https://github.com/jnordberg/wintersmith" target="_blank">Винтерсмите</a></small></p>
+    </footer>
+    <script type="text/javascript">
+      (function (d, w, c) {
+      	(w[c] = w[c] || []).push(function() {
+      	try {
+      	w.yaCounter36023145 = new Ya.Metrika({
+      		id: 36023145,
+      		clickmap: true,
+      		trackLinks: true,
+      		accurateTrackBounce: true
+      	});
+      	} catch(e) { }
+      	});
+      
+      	var n = d.getElementsByTagName("script")[0],
+      		s = d.createElement("script"),
+      		f = function () {n.parentNode.insertBefore(s, n);};
+      		s.type = "text/javascript";
+      	
+      	s.async = true;
+      	s.src = "https://mc.yandex.ru/metrika/watch.js";
+      	
+      	if (w.opera == "[object Opera]") {
+      		d.addEventListener("DOMContentLoaded", f, false);
+      	} else {f();}
+      })(document, window, "yandex_metrika_callbacks");
+    </script>
+  </body>
+</html>

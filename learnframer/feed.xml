@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learn Framer</title>
+    <atom:link href="http://learnframer.ru/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://learnframer.ru</link>
+    <description>Блог о прототипировании интерактивных продуктов</description>
+    <pubDate>Thu, 15 Dec 2016 03:00:00 +0300</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>Процесс создания Твиттер&amp;nbsp;Видео</title>
+      <link>http://learnframer.ru/articles/twitter-video/</link>
+      <pubDate>Thu, 15 Dec 2016 03:00:00 +0300</pubDate>
+      <guid isPermaLink="true">http://learnframer.ru/articles/twitter-video/</guid>
+      <author></author>
+      <description>&lt;p&gt;Перевод статьи. «Я приоткрою детали процесса работы над Твиттер Видео. Я не смогу показать вам бумажных эскизов или вайрфреймов. Мы всего навсего не используем их, а работаем с реально фунционирующими прототипами…»&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    <item>
+      <title>Публикация проекта &lt;nobr&gt;на GitHub Pages&lt;/nobr&gt;</title>
+      <link>http://learnframer.ru/articles/github-pages/</link>
+      <pubDate>Fri, 25 Nov 2016 08:00:00 +0300</pubDate>
+      <guid isPermaLink="true">http://learnframer.ru/articles/github-pages/</guid>
+      <author></author>
+      <description>&lt;p&gt;Все подписчики Framer Studio получают безлимитный хостинг на share.framerjs.com для публикации прототипов. Если же вы работаете через редактор кода (например, Атом), то публиковать проекты вам придется самостоятельно.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/github-pages/github-desktop.png&quot; alt=&quot;GitHub Desktop&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Проблема решается двумя способами:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Свой хостинг. У многих дизайнеров есть свой сайт и они умеют работать с FTP-клиентами.&lt;/li&gt;
+&lt;li&gt;GitHub Pages. Расскажу про него подробнее.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;github-pages&quot;&gt;Github Pages&lt;/h2&gt;
+&lt;p&gt;Все пользователи github.com получают безлимитный хостинг для публикации проектов.
+Для тех, кто не умеет работать с git и командной строкой, есть приложение &lt;a href=&quot;http://desktop.github.com&quot;&gt;GitHub Desktop&lt;/a&gt; (для Мака и Виндоус) с визуальным интерфейсом:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/github-pages/01-github-desktop.png&quot; alt=&quot;GitHub Desktop&quot;&gt;
+&lt;small&gt;&lt;a href=&quot;http://desktop.github.com&quot;&gt;GitHub Desktop&lt;/a&gt; на Маке&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Если в двух словах, то вы связываете папку на своем компьютере с репозиторием на GitHub. В эту папку складываете проект и нажимаете кнопку Commit. Прототип тут же публикуется на сайте &lt;a href=&quot;http://learnframer.ru/articles/github-pages/github.io&quot;&gt;github.io&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&quot;-&quot;&gt;Пошаговая инструцкия&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Создайте аккаунт на &lt;a href=&quot;http://github.com&quot;&gt;http://github.com&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Установите приложение &lt;a href=&quot;http://desktop.github.com&quot;&gt;GitHub Desktop&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;В приложении в левом верхнем углу нажмите плюсик и настройте первый и последний репозиторий: &lt;br /&gt;— Из трех вкладок выбираем Create. &lt;br /&gt;— Name — должно быть username.github.io, где username – ваш логин на Гитхабе.&lt;br /&gt;— Local Path — выбираем, где на компе будет лежать папка с вашими проектами.&lt;/li&gt;
+&lt;li&gt;Идем в созданную папку. Складываем туда хотя бы один проект. Например, структура папок может быть такая: &lt;em&gt;~ / desktop / username.github.io / myFirstProject.framer&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Возвращаемся в приложение и находим там снизу панельку с кнопкой Commit &amp;amp; Sync:
+В поле Summary нужно вписать хотя бы один символ (так устроен git — нельзя публиковать изменение без единого комментария).
+Нажимаем кнопку &lt;strong&gt;Commit &amp;amp; Sync&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Спустя 2–3 минуты ваш прототип заработает по адресу:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;http://username.github.io/myFirstproject.framer
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&quot;-&quot;&gt;Пример&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Мой логин на Гитхабе &lt;a href=&quot;http://github.com/antonkartashov&quot;&gt;antonkartashov&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;Через приложение я создал репозиторий и папку &lt;em&gt;antonkartashov.github.io&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Прототип назывался &lt;em&gt;randomuser-api.framer&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Я скопировал его в папку &lt;em&gt;antonkartashov.github.io&lt;/em&gt; на компе и в приложении нажал Commit &amp;amp; Sync. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Получился адрес: &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://antonkartashov.github.io/randomuser-api.framer/
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;p&gt;Выражаю благодарность &lt;a href=&quot;https://www.facebook.com/alexander.sergievskiy&quot;&gt;Александру Сергиевскому&lt;/a&gt;, который открыл мне этот хак с &lt;em&gt;username.github.io&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Импорт макета из Sketch во&amp;nbsp;Framer</title>
+      <link>http://learnframer.ru/articles/sketch-tips/</link>
+      <pubDate>Fri, 18 Mar 2016 12:00:00 +0300</pubDate>
+      <guid isPermaLink="true">http://learnframer.ru/articles/sketch-tips/</guid>
+      <author></author>
+      <description>&lt;p&gt;Код — инструмент без ограничений. Но есть задачи, решать которые через программирование не самый легкий и, главное, не самый эффективный путь. Грамотная организация импорта из Скетча во Фреймер позволит этим инструментам дополнять друг друга: как можно раньше проверять гипотезы в интерактиве, вносить изменения в макет и моментально применять их к прототипу.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sketch-tips/sketch.png&quot; alt=&quot;Framer + Sketch&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Фишки импорта во Фреймере:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Все слои переносятся из Скетча в один клик. Фреймер сам расставляет их на холсте, поэтому «версткой» прототипа заниматься не придется.&lt;/li&gt;
+&lt;li&gt;Работает с макетами, нарисованными в @1x. Позволяет масштабировать их в 1.5x, 2x, 3x и 4x.&lt;/li&gt;
+&lt;li&gt;Умеет импортировать вектор.&lt;/li&gt;
+&lt;li&gt;Понимает артборды, маски, некоторые свойства обычных слоев.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;-&quot;&gt;Как устроен импорт слоев&lt;/h2&gt;
+&lt;p&gt;Слоем во Фреймере становится каждая группа или символ из Скетча. Вложенность папок сохраняется (артборды в это случае тоже считаются группой). &lt;/p&gt;
+&lt;p&gt;Все несгруппированные слои (как фигуры, так и текст) будут слиты в растровую картинку и станут фоновым изображением той папки, внутри которой они лежат.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sketch-tips/02-layers.png&quot; alt=&quot;Layers&quot;&gt;
+&lt;small&gt;Слои Show More Copy, NEARBY и Rectangle 1119 станут фоном слоя nearby&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;В коде к слоям можно обращаться по их именам с приставкой &lt;code&gt;sketch.&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Правильно (sketch.слой.свойство):&lt;/span&gt;
+sketch.nearby.opacity = &lt;span class=&quot;number&quot;&gt;0.25&lt;/span&gt;
+sketch.Parking_Copy.draggable = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;comment&quot;&gt;# Неправильно (вложенность не нужна):&lt;/span&gt;
+sketch.nearby.Parking_Copy.opacity = &lt;span class=&quot;number&quot;&gt;0.25&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;iframe&quot;&gt;
+    &lt;img class=&quot;ratio&quot;&gt;
+    &lt;iframe
+        src=&quot;https://player.vimeo.com/video/158629547?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&quot; frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Скрытые группы тоже импортируются, но с параметром &lt;code&gt;visible: false&lt;/code&gt;. По умолчанию, они невидимы и во Фреймере, но в любой момент их можно включить через строку кода:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;sketch.layerName.visible = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;-&quot;&gt;Как правильно называть группы и символы&lt;/h4&gt;
+&lt;p&gt;Здесь действую правила именования переменных в JavaScript: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Все пробелы в имени будут заменены на «_». &lt;/li&gt;
+&lt;li&gt;Цифры можно использовать, но не первым символом в названии. Если хотя бы у одного слоя имя будет начинаться с числа, то импорт не состоится.&lt;/li&gt;
+&lt;li&gt;Нельзя в качестве названия использовать зарезервированные в программировании слова, вроде &lt;code&gt;var&lt;/code&gt;, &lt;code&gt;if&lt;/code&gt;, &lt;code&gt;else&lt;/code&gt;, &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;false&lt;/code&gt;, &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;in&lt;/code&gt;, &lt;code&gt;switch&lt;/code&gt;, &lt;code&gt;function&lt;/code&gt;, &lt;code&gt;interface&lt;/code&gt;, &lt;code&gt;new&lt;/code&gt;, &lt;code&gt;delete&lt;/code&gt;, &lt;code&gt;this&lt;/code&gt;, &lt;code&gt;default&lt;/code&gt;…&lt;/li&gt;
+&lt;li&gt;Нельзя использовать знаки пунктуации, кроме символов «&lt;code&gt;$&lt;/code&gt;» и «&lt;code&gt;_&lt;/code&gt;». Фреймер позволит импортировать слой с любым именем, но ошибки появятся при попытке использовать его в коде. Можно забить на это правило и обращаться к слоям таким образом:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;sketch[&lt;span class=&quot;string&quot;&gt;&quot;flat.design&quot;&lt;/span&gt;].opacity = &lt;span class=&quot;number&quot;&gt;0.25&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Используйте маску в Скетче, чтобы создать скрол во Фреймере&lt;/h2&gt;
+&lt;p&gt;Любая маска импортируется как обычный слой, но одной строкой кода ее можно преобразовать в &lt;code&gt;ScrollComponent&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;scroll = ScrollComponent.wrap(sketch.feed)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;iframe&quot;&gt;
+    &lt;img class=&quot;ratio&quot;&gt;
+    &lt;iframe
+        src=&quot;https://player.vimeo.com/video/158648874?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&quot; 
+        frameborder=&quot;0&quot; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&quot;-pdf&quot;&gt;Импортируйте векторную графику через PDF&lt;/h2&gt;
+&lt;p&gt;Просто в имени слоя укажите расширение &lt;code&gt;.pdf&lt;/code&gt;. Использование точки в именах переменных запрещено, поэтому придется обращаться к слою так:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;sketch[&lt;span class=&quot;string&quot;&gt;&quot;icon.pdf&quot;&lt;/span&gt;].opacity = &lt;span class=&quot;number&quot;&gt;0.25&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sketch-tips/vector.png&quot; alt=&quot;Vector in PDF&quot;&gt;
+&lt;small&gt;Теперь никакой размытой графики при увеличении в 20 раз&lt;/small&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Не импортируйте лишние слои&lt;/h2&gt;
+&lt;p&gt;Сгруппируйте их в папку, название которой заканчивается символом «&lt;code&gt;*&lt;/code&gt;», и Фреймер сольет все ее содерживое в одно растровое изображение.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sketch-tips/flattening.png&quot; alt=&quot;Flattening&quot;&gt;
+&lt;small&gt;Во Фреймер экспортируется только один слой — &lt;code&gt;status_bar_light&lt;/code&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Работайте со слоями как с массивами&lt;/h2&gt;
+&lt;p&gt;Большое преимущество Фреймера перед другими инструментами — программирование. Все слои импортируются из Скетча в виде массивов, поэтому мы можем редактировать разом все слои одного артборда или накладывать однотипные анимаций внутри отдельных групп. &lt;/p&gt;
+&lt;p&gt;Например, мы хотим сдвинуть все слои внутри артборда на 20 пикселей. Мы можем сделать это через цикл:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; [&lt;span class=&quot;number&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.9&lt;/span&gt;]
+    sketch.Artboard.children[i].x += &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Либо мы можем уменьшить непрозрачность всех слоев внутри папки &lt;code&gt;megagroup&lt;/code&gt; до 20%:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sketch-tips/children.png&quot; alt=&quot;Layer Children&quot;&gt;
+&lt;small&gt;Мы присвоили перменной &lt;code&gt;layer&lt;/code&gt; все 8 слоев внутри &lt;code&gt;megagroup&lt;/code&gt;. Теперь одной стройкой кода мы можем вывести их имена либо поменять прозрачность&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;В записи с диапазоном &lt;code&gt;[0..9]&lt;/code&gt; неудобно то, что нужно заранее знать, сколько слоев внутри группы. Этого можно избежать: специально для массивов в CoffeeScript есть отдельный вид циклов &lt;code&gt;for—in&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Подвинуть все слои внутри megagroup на 20px вправо&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; layer &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; sketch.megagroup.children
+    layer.x + = &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Иногда параметр цикла все-таки нужен:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 1-й слой подвинется на 20px, &lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# 2-й — на 40px, 3-й — на 60px…&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; layer, i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; sketch.megagroup.children
+    layer.x += &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt; * i
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Цикл &lt;code&gt;for—in&lt;/code&gt; работает только с «детьми» указанной группы, а «дети ее детей» уже недоступны. Например, если вывести все вложенные слои артборда &lt;code&gt;Search&lt;/code&gt; то увидим только один:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; layer, i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; sketch.Search.children
+    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; layer.name
+&lt;span class=&quot;comment&quot;&gt;# → &quot;megagroup&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Доступ к абсолютно всем импортированным слоям можно получить через объект &lt;code&gt;sketch&lt;/code&gt;. Для объектов в CoffeeSctipt тоже есть отдельный вид циклов — &lt;code&gt;for–of&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; k, layer &lt;span class=&quot;keyword&quot;&gt;of&lt;/span&gt; sketch
+    layer.visible = &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/sketch-tips/04-sketch-object.png&quot; alt=&quot;&quot;&gt;
+&lt;small&gt;Внутри объекта sketch все слои хранятся без учета иерархии и в обратном порядке&lt;/small&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Работайте с относительными значениями&lt;/h2&gt;
+&lt;p&gt;Еще одно из преимуществ программирования — вычисления. Указывайте все размеры и координаты не абсолютными значениями, а относительно размеров экрана. &lt;/p&gt;
+&lt;p&gt;Вы сможете сделать ваш прототип более устойчивым к постоянным изменениям размеров и координат любого элемента на экране. Вы даже сможете сделать прототип адаптивным, и он будет корректно отображаться на больших и маленьких экранах. В этом поможет глобальный объект &lt;code&gt;Screen&lt;/code&gt;, который хранит всю информацию о размерах окна:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; Screen.width  &lt;span class=&quot;comment&quot;&gt;# → 750 для iPhone 6&lt;/span&gt;
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; Screen.height &lt;span class=&quot;comment&quot;&gt;# → 1334&lt;/span&gt;
+
+sketch.card.height = Screen.height * &lt;span class=&quot;number&quot;&gt;0.4&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;
+sketch.card.width  = Screen.width - &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;
+
+sketch.background.size  = Screen.size
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Чтобы не повторять каждый раз приставку &lt;code&gt;sketch.layer.&lt;/code&gt; в каждой строке, можно использовать атрибут &lt;code&gt;props&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;sketch.card.props = 
+    &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;:  Screen.height * &lt;span class=&quot;number&quot;&gt;0.4&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;
+    &lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:   Screen.width - &lt;span class=&quot;number&quot;&gt;100&lt;/span&gt;
+    &lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Указывать координаты объектов через &lt;code&gt;x&lt;/code&gt; и &lt;code&gt;y&lt;/code&gt; — не единственная возможность. Иногда удобно выравнивать объект относительно его центра или правого края.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;sketch.card.x    = &lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;
+sketch.card.midX = &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;
+sketch.card.maxX = &lt;span class=&quot;number&quot;&gt;120&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Результат любой из этих трех строк выдаст один и тот же результат:&lt;/p&gt;
+&lt;center&gt;&lt;img src=&quot;maxx.png&quot; style=&quot;width: 160px; height: 160px&quot; /&gt;&lt;/center&gt;
+
+&lt;p&gt;Например, так мы можем выравнивать объект по центру экрана:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;sketch.card.midX = Screen.width  / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;
+sketch.card.midY = Screen.height / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    <item>
+      <title>Бесплатный Framer&amp;nbsp;на Windows и&amp;nbsp;OS&amp;nbsp;X</title>
+      <link>http://learnframer.ru/articles/on-windows-and-mac-for-free/</link>
+      <pubDate>Fri, 18 Mar 2016 08:00:00 +0300</pubDate>
+      <guid isPermaLink="true">http://learnframer.ru/articles/on-windows-and-mac-for-free/</guid>
+      <author></author>
+      <description>&lt;p&gt;Framer.js и Framer Studio — разные вещи. Framer.js — это бесплатная JavaScript-библиотека, которой можно пользоваться в любом редакторе кода; Framer Studio — платное приложение. Я расскажу, как с помощью редактора Atom запустить Framer.js на Windows и OS X.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/framerjs-in-atom.png&quot; alt=&quot;Framer.js в редакторе кода Atom&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Чтобы начать работу, достаточно скачать шаблон проекта с официального сайта Фреймера в разделе &lt;strong&gt;&lt;a href=&quot;http://builds.framerjs.com&quot;&gt;builds.framerjs.com&lt;/a&gt;&lt;/strong&gt; и открыть в любом редакторе кода.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/builds.png&quot; alt=&quot;&quot;&gt;
+&lt;small&gt;&lt;a href=&quot;http://builds.framerjs.com&quot;&gt;builds.framerjs.com&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Файлы внутри шаблона организованы как на обычном сайте:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;index.html&lt;/strong&gt; запускается для просмотра прототипа. Он уже правильно настроен для любого проекта. Его придется менять, если только вы добавляете в проект другие JavaScript-библиотеки (&lt;a href=&quot;http://d3js.org&quot;&gt;D3.js&lt;/a&gt;, &lt;a href=&quot;http://hammerjs.github.io&quot;&gt;Hammer.js&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;app.js&lt;/strong&gt; — сюда дизайнер пишет свой код на языке JavaScript (чтобы писать на CoffeeScript нужно создать файл &lt;strong&gt;app.coffee&lt;/strong&gt; самостоятельно).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/framer&lt;/strong&gt; — папка с библиотекой Framer.js.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/images&lt;/strong&gt; — папка с нарезкой макета, шрифтами и прочими материалами.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Открываем &lt;strong&gt;app.js&lt;/strong&gt; в редакторе, а &lt;strong&gt;index.html&lt;/strong&gt; в браузере.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/xcode.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;В принципе все готово к работе и на этом можно остановиться, но рабочее окружение можно еще улучшить:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Создать файл &lt;strong&gt;app.coffee&lt;/strong&gt; и писать весь код на CoffeeScript, т.к. &lt;a href=&quot;http://framerjs.com/docs/#layer.layer&quot;&gt;документация библиотеки&lt;/a&gt; составлена под него. &lt;/li&gt;
+&lt;li&gt;Установить плагины, которые при каждом сохранении документа будут конвертировать наш CoffeeScript и автоматически обновлять превью в браузере.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;-&quot;&gt;Установка Атома&lt;/h2&gt;
+&lt;p&gt;Атом — редактор кода от разработчиков Гитхаба. Выбор пал на него из-за удобного интерфейса установки плагинов, в котором ненужно лезть в командную строку или config-файлы. Скачать здесь:&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;h3&gt;&lt;a href=&quot;https://atom.io&quot;&gt;atom.io&lt;/a&gt;&lt;/h3&gt;&lt;/center&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;После установки мы видим экран приветствия:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/01-welcome.png&quot; alt=&quot;Welcome to Atom&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Нужно выбрать Install a Package › Open Installer и попадаем сюда:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/02-install.png&quot; alt=&quot;Installer&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Вбиваем в поиске &lt;strong&gt;coffee compile&lt;/strong&gt; и &lt;strong&gt;html preview&lt;/strong&gt;. Устанавливаем их:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/03-coffee-compile.png&quot; alt=&quot;Coffee-Compile&quot;&gt;
+&lt;img src=&quot;/articles/on-windows-and-mac-for-free/04-html-preview.png&quot; alt=&quot;HTML-Preview&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Теперь нужно правильно настроить плагины:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;в настройках Coffee-Compile включить &lt;strong&gt;Compile on save without preview&lt;/strong&gt;. Наш код будет конвертироваться в JavaScript по каждому нажатию &lt;kbd&gt;Ctrl&lt;/kbd&gt;&lt;kbd&gt;S&lt;/kbd&gt; на Винде (и &lt;kbd&gt;Cmd&lt;/kbd&gt;&lt;kbd&gt;S&lt;/kbd&gt; на Маке). &lt;/li&gt;
+&lt;li&gt;в настройках HTML-Preview включить &lt;strong&gt;Trigger On Save&lt;/strong&gt;. Как только изменится файл с JavaScript, превью моментально отобразит все изменения.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/05-coffee-compile-settings.png&quot; alt=&quot;Coffee-Compile Settings&quot;&gt;
+&lt;img src=&quot;/articles/on-windows-and-mac-for-free/06-compile-on-save.png&quot; alt=&quot;Compile CoffeeScript on save&quot;&gt;
+&lt;img src=&quot;/articles/on-windows-and-mac-for-free/07-html-preview-settings.png&quot; alt=&quot;HTML-Preview Settings&quot;&gt;
+&lt;img src=&quot;/articles/on-windows-and-mac-for-free/08-preview-trigger-on-save.png&quot; alt=&quot;Trigger on save&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-&quot;&gt;Создание нового проекта&lt;/h2&gt;
+&lt;p&gt;Каждый проект создается на основе шаблона. Откроем его в Атоме. Чтобы открылся весь проект, а не один его файл, не кликайте по папке два раза — просто выделите ее и нажмите кнопку Open (либо &lt;kbd&gt;Enter&lt;/kbd&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/10-open-project.png&quot; alt=&quot;Open project&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Если все сделано правильно, то слева в редакторе мы увидим список файлов нашего проекта. Первым делом нужно удалить все содержимое &lt;strong&gt;app.js&lt;/strong&gt; и переименовать его в &lt;strong&gt;app.coffee&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/11-rename-app-js.png&quot; alt=&quot;Rename app.js&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Теперь заходим в &lt;strong&gt;index.html&lt;/strong&gt;, нажимаем правой кнопкой мыши внутри файла и выбираем &lt;strong&gt;Preview HTML&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/15-preview.png&quot; alt=&quot;HTML Preview&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Теперь можно закрыть вкладку &lt;strong&gt;index.html&lt;/strong&gt; (но не &lt;strong&gt;index.html Preview&lt;/strong&gt;). Попробуем написать пробный код, чтобы проверить работу окружения:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;я сохранил в папку &lt;strong&gt;images&lt;/strong&gt; изображение с домашним экраном Айфона.&lt;/li&gt;
+&lt;li&gt;вписал код и нажал «Сохранить».&lt;/li&gt;
+&lt;li&gt;автоматически создался файл &lt;strong&gt;app.js&lt;/strong&gt; (сработал Coffee-Compile) и в превью появилось изображение (сработал HTML-Preview).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/16-coding.png&quot; alt=&quot;Trying to code&quot;&gt;&lt;/p&gt;
+&lt;p&gt;На картинке видно, что браузер отображает экран в размере 100%. Это неудобно, &lt;nobr&gt;т. к.&lt;/nobr&gt; высота экрана Айфона в&amp;nbsp;пикселях больше, чем экран Макбука (1334px vs. 900px). &lt;/p&gt;
+&lt;p&gt;Поэтому включим превью телефона:    &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;Framer.Device = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Framer.DeviceComponent
+Framer.Device.setupContext()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/on-windows-and-mac-for-free/17-device.png&quot; alt=&quot;Device&quot;&gt;&lt;/p&gt;
+&lt;p&gt;О всех поддерживаемых устройствах написано в документации в разделе &lt;a href=&quot;https://framerjs.com/docs/#device.deviceType&quot;&gt;Device.deviceType&lt;/a&gt;. Там же можно узнать, как менять ориентацию телефона, увеличивать его или скрывать.&lt;/p&gt;
+&lt;h2 id=&quot;-&quot;&gt;Публикация прототипа&lt;/h2&gt;
+&lt;p&gt;Одно из важнейших преимуществ Framer Studio по сравнению с редактором кода — возможность расшарить свой прототип в один клик: всем пользователям приложения предоставляется бесплатный хостинг на &lt;strong&gt;share.framerjs.com&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Если у вас есть собственный хостинг, то можете загружать свой прототип через ftp. В одной из следующих статей разберем, как загружать прототипы на бесплатный хостинг &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; через приложение &lt;a href=&quot;https://desktop.github.com/&quot;&gt;GitHub Desktop&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Основы  CoffeeScript во&amp;nbsp;Framer</title>
+      <link>http://learnframer.ru/articles/basics/</link>
+      <pubDate>Fri, 18 Mar 2016 04:00:00 +0300</pubDate>
+      <guid isPermaLink="true">http://learnframer.ru/articles/basics/</guid>
+      <author></author>
+      <description>&lt;p&gt;Без основ программирования овладеть Фреймером сложно: непонятны ни документация, ни чужие примеры; постоянные ошибки исправляются долго; а код не ощущается как удобный и послушный инструмент. Основы не так сложны, как может показаться.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Простейшая программа может выглядеть так:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Результат вычислений обычно сохраняют в &lt;em&gt;переменную&lt;/em&gt;, чтобы использовать его позже:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;a = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Чтобы просмотреть содержимое переменной, есть команда &lt;code&gt;print()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;a = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(a)
+&lt;span class=&quot;comment&quot;&gt;# » 4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/basics/print.png&quot; alt=&quot;print&quot;&gt;
+&lt;small&gt;Содержимое &lt;code&gt;print()&lt;/code&gt; выводится справа снизу — во всплывающем белом окне.&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;Чтобы вывести результат вычислений, не обязательно сохранять его в переменную. Можно сразу написать внутри команды &lt;code&gt;print()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt; * &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)
+&lt;span class=&quot;comment&quot;&gt;# » 52&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;Текст в отличие от чисел берут в кавычки (чтобы компьютер мог отличать имена переменных от значений):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;hello = &lt;span class=&quot;string&quot;&gt;'bye'&lt;/span&gt;
+
+b =  hello
+c = &lt;span class=&quot;string&quot;&gt;'hello'&lt;/span&gt;
+
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(b) &lt;span class=&quot;comment&quot;&gt;# » &quot;bye&quot;&lt;/span&gt;
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(c) &lt;span class=&quot;comment&quot;&gt;# » &quot;hello&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Еще есть зарезервированные слова &lt;code&gt;true&lt;/code&gt; и &lt;code&gt;false&lt;/code&gt;, чтобы хранить результаты сравнений. Например, «1 &amp;gt; 3» — это ложь, а «10 &amp;gt; 3» — правда:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;)
+&lt;span class=&quot;comment&quot;&gt;# » false&lt;/span&gt;
+
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt; &amp;gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;)
+&lt;span class=&quot;comment&quot;&gt;# » true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Когда мы их используем, кавычки не нужны — &lt;code&gt;true&lt;/code&gt; и &lt;code&gt;false&lt;/code&gt; не являются текстом. Их тип данных — логика.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;a = &lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt;
+b = &lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Условия&lt;/h2&gt;
+&lt;p&gt;Код может выполняться не только по порядку строка за строкой. Используя сравнения, мы можем попросить программу выбрать один из двух (или более) возможных вариантов:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;b = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;
+
+&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; b &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; 
+    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;'Less than two'&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; 
+    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;'Greater than or equal to two'&lt;/span&gt;
+
+&lt;span class=&quot;comment&quot;&gt;# » &quot;Greater than or equal to two&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&quot;-coffeescript-&quot;&gt;Неправильные отступы в  CoffeeScript считаются ошибкой. С их помощью мы показываем вложенность блоков. В других языках эту функцию выполняют скобки, а отступы расставляют для лучшей читаемости кода.&lt;/h5&gt;
+&lt;p&gt;Так, например, выглядят условия на JavaScript:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-JavaScript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* JavaScript */&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (b &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) {
+    print(&lt;span class=&quot;string&quot;&gt;'Less than two'&lt;/span&gt;);
+} &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; {
+    print(&lt;span class=&quot;string&quot;&gt;'Greater than or equal to two'&lt;/span&gt;);    
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Циклы&lt;/h2&gt;
+&lt;p&gt;Еще один способ выполнять код не по порядку — зациклить какую-то его часть на некоторое время. Представьте, что нам нужно вывести все четные числа от 0 до 20:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;8&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;12&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;14&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;16&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;18&lt;/span&gt;)
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;С помощью циклов это выполняется гораздо проще:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; x &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; [&lt;span class=&quot;number&quot;&gt;0.&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;.10&lt;/span&gt;]
+    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(x * &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Такой код позволит быстро вывести даже четные числа от 0 до 2000. &lt;/p&gt;
+&lt;p&gt;К тому же с циклами быстрее вносить правки: в примере выше достаточно изменить одну строчку. А в предыдущем ему пришлось бы править весь код.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Функции&lt;/h2&gt;
+&lt;p&gt;Внутри программы можно создать подпрограмму — &lt;em&gt;функцию&lt;/em&gt;; дать ей любое имя и вызывать в разных частях прототипа:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;sum&lt;/span&gt; = &lt;span class=&quot;params&quot;&gt;(x, y)&lt;/span&gt; -&amp;gt;&lt;/span&gt;
+    x + y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;summa&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;имя функции&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;x, y&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;параметры&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;–&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;заменяет слово &lt;code&gt;function&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Код внутри &lt;code&gt;-&amp;gt;&lt;/code&gt; не выполняется, пока мы его не вызовем с какими-то параметрами. Параметры можно вводить каждый раз разные: &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Объявление функции&lt;/span&gt;
+&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;sum&lt;/span&gt; = &lt;span class=&quot;params&quot;&gt;(x, y)&lt;/span&gt; -&amp;gt;&lt;/span&gt;
+    x + y
+
+&lt;span class=&quot;comment&quot;&gt;# Вызов функции&lt;/span&gt;
+a = sum(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)       
+b = sum(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;)
+c = sum(a, b)
+
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; a, b, c
+&lt;span class=&quot;comment&quot;&gt;# » 4, 30, 34&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Кстати, &lt;code&gt;print()&lt;/code&gt; — это тоже функция:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Функция может быть без параметров. Тогда при ее вызове мы пишем пустые скобки (опять же, чтобы показать, что это запуск функции, а не переменная):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;x = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;
+y = &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;function&quot;&gt;
+&lt;span class=&quot;title&quot;&gt;prod&lt;/span&gt; = -&amp;gt;&lt;/span&gt;
+    x * y
+
+z = prod()
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; z
+&lt;span class=&quot;comment&quot;&gt;# » 6&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&quot;coffeescript-&quot;&gt;CoffeeScript позволяет не ставить скобки при вызове функций, если это не вызывает разночтений.&lt;/h5&gt;
+&lt;p&gt;Но если у функции нет ни одного параметра, то скобки убирать нельзя:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;sum x, y
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Hello world&quot;&lt;/span&gt;
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; x
+
+prod()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Также функции бывают &lt;em&gt;анонимными&lt;/em&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;-&amp;gt;
+    x + y
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Их используют, чтобы передавать в качестве параметров в другие функции либо в объекты.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Объекты&lt;/h2&gt;
+&lt;p&gt;Если говорить грубо, то объект — это набор переменных, объединенных одним именем. Создание объекта выглядит так:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;designer = 
+    &lt;span class=&quot;attribute&quot;&gt;name&lt;/span&gt;:  &lt;span class=&quot;string&quot;&gt;'Anton'&lt;/span&gt;
+    &lt;span class=&quot;attribute&quot;&gt;city&lt;/span&gt;:  &lt;span class=&quot;string&quot;&gt;'Moscow'&lt;/span&gt;
+    &lt;span class=&quot;attribute&quot;&gt;age&lt;/span&gt;:    &lt;span class=&quot;number&quot;&gt;29&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Переменные внутри объекта называются &lt;em&gt;свойствами&lt;/em&gt;. &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;designer&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;объект&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;name&lt;/code&gt;, &lt;code&gt;age&lt;/code&gt;, &lt;code&gt;city&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;свойства объекта&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5 id=&quot;-&quot;&gt;Чтобы при создании нового объекта присвоить значения его свойствам, используют двоеточие, а не знак равенства.&lt;/h5&gt;
+&lt;p&gt;Теперь мы можем обращаться к свойствам объекта так:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; designer.name
+year = &lt;span class=&quot;number&quot;&gt;2016&lt;/span&gt; - designer.age
+designer.city = &lt;span class=&quot;string&quot;&gt;'St. Petersburg'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Помимо свойств у объектов могут быть свои функции. Их называют &lt;em&gt;методами&lt;/em&gt;. Чтобы создать метод, присвойте одному из свойств анонимную функцию:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;designer
+    &lt;span class=&quot;attribute&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;'Anton'&lt;/span&gt;
+    &lt;span class=&quot;attribute&quot;&gt;age&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;29&lt;/span&gt;
+    &lt;span class=&quot;attribute&quot;&gt;sayHello&lt;/span&gt;: &lt;span class=&quot;function&quot;&gt;-&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;'Hello!'&lt;/span&gt;
+
+designer.sayHello()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;В работе над прототипами мы чаще будем работать с методами, чем с простыми функциями:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA.center()
+layerA.placeBehind(layerB)
+layerA.animate(&lt;span class=&quot;attribute&quot;&gt;x&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)
+layerA.onClick(&lt;span class=&quot;function&quot;&gt;-&amp;gt;&lt;/span&gt; layerA.x = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Параметры методов тоже можно не брать в скобки, если это не вызывает разночтений. Если параметры отсутствуют, то скобки обязательны:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA.center()
+layerA.placeBehind layerB
+layerA.animate &lt;span class=&quot;attribute&quot;&gt;x&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;opacity&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;
+layerA.onClick -&amp;gt; layerA.x = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Методы &lt;code&gt;.animate()&lt;/code&gt; и &lt;code&gt;.onClick()&lt;/code&gt; еще разберем ниже.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Конструкторы и компоненты&lt;/h2&gt;
+&lt;p&gt;Конструкторы довольно сложная тема, а в прототипировании их используют нечасто. Поэтому просто пробежимся по ним, чтобы иметь представление.&lt;/p&gt;
+&lt;p&gt;Чтобы не пересобирать каждый раз однотипные объекты с одними и теми же свойствами, в JavaScript существуют &lt;em&gt;конструкторы&lt;/em&gt; — шаблоны заранее настроенных объектов. Конструктор выглядит как обычная  функция:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;Car&lt;/span&gt; = -&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name  = &lt;span class=&quot;string&quot;&gt;'BMW'&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.color = &lt;span class=&quot;string&quot;&gt;'black'&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.speed =  &lt;span class=&quot;number&quot;&gt;220&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Теперь достаточно написать одну фразу &lt;code&gt;new Car&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;myCar = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Car
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;…и у нас появится новый объект с уже заполненными свойствами:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; myCar.name
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; myCar.color
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; myCar.speed
+&lt;span class=&quot;comment&quot;&gt;# » &quot;BMW&quot;&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# » &quot;black&quot;&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# » 220&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Конструкторы нужны, чтобы писать свои собственные компоненты и модули. В них можно предусмотреть количество и тип параметров, дать каждому свойству имя, настроить значения по умолчанию. &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;Student&lt;/span&gt; = &lt;span class=&quot;params&quot;&gt;(obj)&lt;/span&gt; -&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.name = obj.name ? &lt;span class=&quot;string&quot;&gt;'Ivan'&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.age  = obj.age  ?  &lt;span class=&quot;number&quot;&gt;17&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.city = obj.city ? &lt;span class=&quot;string&quot;&gt;'Moscow'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Этот код достаточно сложный для новичков, но тут можно увидеть следующее: конструктор проверяет наличие введеных параметров (&lt;code&gt;name ?&lt;/code&gt;, &lt;code&gt;age ?&lt;/code&gt;, &lt;code&gt;city ?&lt;/code&gt;) и если они отсутствуют, то сам заполняет их значениями по умолчанию (&lt;code&gt;&amp;#39;Ivan&amp;#39;&lt;/code&gt;, &lt;code&gt;17&lt;/code&gt;, &lt;code&gt;&amp;#39;Moscow&amp;#39;&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Теперь мы можем создавать объект с большей гибкостью. Например, задать самостоятельно два свойства, а остальные оставить на совести конструктора:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;developer = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Student
+    &lt;span class=&quot;attribute&quot;&gt;age&lt;/span&gt;:   &lt;span class=&quot;number&quot;&gt;19&lt;/span&gt;
+    &lt;span class=&quot;attribute&quot;&gt;name&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;'Egor'&lt;/span&gt;
+
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; developer.name
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; developer.age
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; developer.city
+&lt;span class=&quot;comment&quot;&gt;# » &quot;Egor&quot;&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# » 19&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# » &quot;Moscow&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Во Framer.js есть 6 типов компонентов, на основе которых создаются все прототипы:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1. Слои&lt;/td&gt;
+&lt;td&gt;Layer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2. Фоны&lt;/td&gt;
+&lt;td&gt;BackgroundLayer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3. Скрол&lt;/td&gt;
+&lt;td&gt;ScrollComponent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4. Пэйджинг&lt;/td&gt;
+&lt;td&gt;PageComponent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5. Слайдеры&lt;/td&gt;
+&lt;td&gt;SliderComponent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6. Видео&lt;/td&gt;
+&lt;td&gt;VideoLayer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Например, для объекта Layer создатели Framer.js настроли более 100 свойств и методов, позволяющих вставлять изобржения, обрабатывать &lt;nobr&gt;драг-н-дроп,&lt;/nobr&gt; вращать слои в 3D и т.д. Использование компонентов ускоряет работу, но без потери гибкости: мы можем менять любые свойства или добавлять свои.&lt;/p&gt;
+&lt;p&gt;Для создания слоя используют оператор &lt;code&gt;new&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Layer
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;По умолчанию Layer создает полупрозрачный синий квадрат размером 100×100 пикселей и размещает его по координате (0, 0) — в левом верхнем углу телефона.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/basics/newLayer.png&quot; alt=&quot;new Layer&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Попробуем вывести значения свойств, которые мы не задавали:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; Layer 
+
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; layerA.opacity
+&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt; layerA.width
+&lt;span class=&quot;comment&quot;&gt;# » 1&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# » 100&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;Анимация — это функция&lt;/h2&gt;
+&lt;p&gt;Мы уже разобрали функции и методы. Одни из самых используемых методов объекта Layer — это анимации. &lt;code&gt;animate()&lt;/code&gt; — сложная функция. &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA.animate(&lt;span class=&quot;attribute&quot;&gt;x&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;y&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;400&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;options&lt;/span&gt;: {&lt;span class=&quot;attribute&quot;&gt;time&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;attribute&quot;&gt;curve&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;ease-in&quot;&lt;/span&gt;})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;CoffeeScript позволяет записать эту функцию так:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA.animate
+    &lt;span class=&quot;attribute&quot;&gt;x&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;200&lt;/span&gt;
+    &lt;span class=&quot;attribute&quot;&gt;y&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;400&lt;/span&gt;
+    &lt;span class=&quot;attribute&quot;&gt;options&lt;/span&gt;:
+        &lt;span class=&quot;attribute&quot;&gt;time&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;
+        &lt;span class=&quot;attribute&quot;&gt;curve&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&quot;ease-in&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;-&quot;&gt;События&lt;/h2&gt;
+&lt;p&gt;Чтобы сделать прототип интерактивным, под каждое действие пользователя (клик, скрол, долгое нажатие) пишут свою функцию. Прототип начнет ежесекундно проверять, совершил ли пользователь действие и запускать в ответ на него подпрограмму. &lt;/p&gt;
+&lt;p&gt;Действия пользователя называют &lt;em&gt;событиями&lt;/em&gt;, а функцию, срабатывающую в ответ — &lt;em&gt;колбэком&lt;/em&gt; или &lt;em&gt;обработчиком события&lt;/em&gt;. Событие работает как обычный метод:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA.onClick(functionA)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Например, сделаем по клику слой красным:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Колбэк&lt;/span&gt;
+&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;title&quot;&gt;makeRed&lt;/span&gt; = -&amp;gt;&lt;/span&gt;
+    layerA.backgroundColor = &lt;span class=&quot;string&quot;&gt;&quot;red&quot;&lt;/span&gt;
+
+&lt;span class=&quot;comment&quot;&gt;# Событие&lt;/span&gt;
+layerA.onClick(makeRed)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Колбэк можно не брать в скобки:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA.onClick makeRed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Зачастую колбэкам не нужно никакого имени, ведь в коде мы используем его только один раз — чтобы передать внутрь события. Код можно сократить, если использовать в качестве колбэка анонимную функцию:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA.onClick(&lt;span class=&quot;function&quot;&gt;-&amp;gt;&lt;/span&gt; layerA.backgroundColor = &lt;span class=&quot;string&quot;&gt;&quot;red&quot;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;А без скобок:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-CoffeeScript&quot;&gt;layerA.onClick -&amp;gt; layerA.backgroundColor = &lt;span class=&quot;string&quot;&gt;&quot;red&quot;&lt;/span&gt;
+
+layerA.onClick -&amp;gt; 
+    layerA.backgroundColor = &lt;span class=&quot;string&quot;&gt;&quot;red&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/basics/exercise.png&quot; alt=&quot;&quot;&gt;
+&lt;small&gt;myFirstPrototype.framer&lt;/small&gt;&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
