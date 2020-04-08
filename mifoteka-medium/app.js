@@ -127,7 +127,7 @@ player.onChange('y', ()=> {
     );
 
     fullscreen.opacity = Utils.modulate(
-        player.y, [674 - 56, 0],
+        player.y, [674 - 56 - 30, 300],
                   [0,   1]
     );
 
