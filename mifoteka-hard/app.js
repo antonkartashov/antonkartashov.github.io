@@ -141,7 +141,7 @@ player.onChange('y', ()=> {
                   [1, 0],
                   true);
 
-    cover.x = -92 + 158 * (1 - kx * kx * kx * kx * kx * kx);
+    cover.x = -92 + 158 * (1 - kx * kx * kx * kx);
 
     ky = Utils.modulate(
         player.y, [674, -56],
