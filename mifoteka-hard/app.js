@@ -148,8 +148,8 @@ player.onChange('y', ()=> {
                   [0, 1],
                   true);
 
-    cover.y = -154 + 266 * ky * ky
-    
+    cover.y = -144 + 256 * ky * ky
+
     cover.scale = 1/9 + (1 - 1/9) * (1 - kx * kx * kx * kx);
 
     cover.scale = Utils.modulate(
