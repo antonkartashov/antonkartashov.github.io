@@ -194,7 +194,7 @@ closeButton.onTap(()=> {
 });
 
 let status = new Layer ({
-    image: 'Status Bar.png',
+    image: 'StatusBar.png',
     width: iPhoneX.width,
     height: 44,
     parent: phone,
