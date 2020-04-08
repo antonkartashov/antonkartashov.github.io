@@ -39,7 +39,7 @@ let player = new Layer ({
 let fullscreen = new Layer ({
     parent: player,
     size: iPhoneX,
-    image: 'images/Player Fullscreen.png',
+    image: 'images/PlayerFullscreen.png',
     // backgroundColor: 'aquamarine',
     y: 56,
     opacity: 0
@@ -58,7 +58,7 @@ let white = new Layer ({
 });
 let mini = new Layer ({
     parent: player,
-    image: 'images/Player Mini.png',
+    image: 'images/PlayerMini.png',
     // backgroundColor: 'tomato',
     width: iPhoneX.width,
     height: 56
@@ -201,7 +201,7 @@ let status = new Layer ({
 });
 
 let displayShape = new Layer ({
-    image: 'display Shape.png',
+    image: 'DisplayShape.png',
     width: iPhoneX.width + 80,
     height: iPhoneX.height + 80,
     scale: phone.scale,
