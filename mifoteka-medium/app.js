@@ -1,4 +1,4 @@
-bg = new BackgroundLayer ({backgroundColor: '#eee'})
+bg = new BackgroundLayer ({backgroundColor: 'gold'})
 
 let iPhoneX = {width: 375, height: 812}
 
