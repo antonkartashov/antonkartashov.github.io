@@ -43,14 +43,19 @@ let player = new Layer ({
     parent: phone,
     width: iPhoneX.width,
     height: 56 + iPhoneX.height,
-    image: 'images/player bg.png',
-    y: 674
+    // image: 'images/player bg.png',
+    backgroundColor: 'white',
+    shadowY: -1,
+    shadowBlur: 1,
+    shadowColor: 'rgba(0, 0, 0, .15)',
+    y: 674,
+    clip: true
 });
 
 let fullscreen = new Layer ({
     parent: player,
     size: iPhoneX,
-    image: 'images/Player Fullscreen.png',
+    image: 'images/PlayerFullscreen.png',
     // backgroundColor: 'aquamarine',
     y: 56,
     opacity: 0
@@ -72,7 +77,7 @@ let white = new Layer ({
 
 let mini = new Layer ({
     parent: player,
-    image: 'images/Player Mini.png',
+    image: 'images/PlayerMini.png',
     // backgroundColor: 'tomato',
     width: iPhoneX.width,
     height: 57
@@ -81,7 +86,7 @@ let mini = new Layer ({
 
 let tabBar = new Layer ({
     parent: phone,
-    image: 'images/Tab Bar.png',
+    image: 'images/TabBar.png',
     // backgroundColor: 'gold',
     width: iPhoneX.width,
     height: 84,
@@ -150,14 +155,14 @@ closeButton.onTap(()=> {
 });
 
 let status = new Layer ({
-    image: 'Status Bar.png',
+    image: 'StatusBar.png',
     width: iPhoneX.width,
     height: 44,
     parent: phone,
 });
 
 let displayShape = new Layer ({
-    image: 'display Shape.png',
+    image: 'DisplayShape.png',
     width: iPhoneX.width + 80,
     height: iPhoneX.height + 80,
     scale: phone.scale,

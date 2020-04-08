@@ -65,7 +65,7 @@ let mini = new Layer ({
 });
 let tabBar = new Layer ({
     parent: phone,
-    image: 'images/Tab Bar.png',
+    image: 'images/TabBar.png',
     // backgroundColor: 'gold',
     width: iPhoneX.width,
     height: 84,
