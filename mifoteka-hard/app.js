@@ -150,12 +150,12 @@ player.onChange('y', ()=> {
 
     cover.y = -144 + 256 * ky * ky
 
-    cover.scale = 1/9 + (1 - 1/9) * (1 - kx * kx * kx * kx);
+    // cover.scale = 1/9 + (1 - 1/9) * (1 - kx * kx * kx * kx);
 
-    cover.scale = Utils.modulate(
-        player.y, [674, -56],
-                  [1/9, 1],
-                  true);
+    // cover.scale = Utils.modulate(
+    //     player.y, [674, -56],
+    //               [1/9, 1],
+    //               true);
 
     fullscreen.y = Utils.modulate(
         player.y, [674 + 40, -56],

@@ -83,6 +83,7 @@ let mini = new Layer ({
     height: 57
 });
 
+
 let tabBar = new Layer ({
     parent: phone,
     image: 'images/TabBar.png',
@@ -160,11 +161,11 @@ let status = new Layer ({
     parent: phone,
 });
 
-// let displayShape = new Layer ({
-//     image: 'DisplayShape.png',
-//     width: iPhoneX.width + 80,
-//     height: iPhoneX.height + 80,
-//     scale: phone.scale,
-//     // opacity: .8,
-//     point: Align.center()
-// });
+let displayShape = new Layer ({
+    image: 'DisplayShape.png',
+    width: iPhoneX.width + 80,
+    height: iPhoneX.height + 80,
+    scale: phone.scale,
+    // opacity: .8,
+    point: Align.center()
+});
