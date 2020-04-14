@@ -160,11 +160,11 @@ let status = new Layer ({
     parent: phone,
 });
 
-// let displayShape = new Layer ({
-//     image: 'DisplayShape.png',
-//     width: iPhoneX.width + 80,
-//     height: iPhoneX.height + 80,
-//     scale: phone.scale,
-//     // opacity: .8,
-//     point: Align.center()
-// });
+let displayShape = new Layer ({
+    image: 'DisplayShape.png',
+    width: iPhoneX.width + 80,
+    height: iPhoneX.height + 80,
+    scale: phone.scale,
+    // opacity: .8,
+    point: Align.center()
+});
