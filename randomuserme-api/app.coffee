@@ -18,13 +18,12 @@ for item, i in handle
 	user = new Layer
 		image: item.picture.medium
 
-		width: 250, height: 250
+		width: 180, height: 180
 		x: Align.center
 		y: i * 300
-		scale: .5
 		borderRadius: "50%"
-		borderWidth: 8
-		borderColor: "rgba(255, 255, 255, .5)"
+		borderWidth: 3
+		borderColor: "rgba(255, 255, 255, .9)"
 
 	headline = new Layer
 		html: "#{first} #{last}"
