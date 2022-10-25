@@ -12,7 +12,7 @@ for item, i in handle
 		image: Utils.randomImage()
 		backgroundColor: Utils.randomColor()
 		width: 750, height: 300
-		opacity: .8
+		opacity: .85
 		y: i * 300
 
 	user = new Layer
@@ -20,7 +20,7 @@ for item, i in handle
 
 		width: 160, height: 160
 		x: Align.center
-		y: i * 300 + 20
+		y: i * 300 + 40
 		borderRadius: "50%"
 		borderWidth: 3
 		borderColor: "rgba(255, 255, 255, .9)"
@@ -31,6 +31,6 @@ for item, i in handle
 			'text-align' : 'center'
 			'font-family' : 'Roboto Mono'
 			'font-size' : '24pt'
-		y: i * 300 + 220
+		y: i * 300 + 230
 		width: 750
 		backgroundColor: ""
