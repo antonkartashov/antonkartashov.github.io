@@ -22,10 +22,9 @@ for item, i in handle
 		width: 250, height: 250
 		x: Align.center
 		y: i * 300
-		scale: .6
-
+		scale: .5
 		borderRadius: "50%"
-		borderWidth: 4
+		borderWidth: 8
 		borderColor: "rgba(255, 255, 255, .5)"
 
 	headline = new Layer
@@ -34,7 +33,6 @@ for item, i in handle
 			textAlign: "center"
 			fontFamily: "Roboto Mono"
 			fontSize: "23pt"
-
 		y: i * 300 + 220
 		width: 750
 		backgroundColor: ""
