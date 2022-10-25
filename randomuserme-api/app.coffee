@@ -12,7 +12,7 @@ for item, i in handle
 		image: Utils.randomImage()
 		backgroundColor: Utils.randomColor()
 		width: 750, height: 300
-		opacity: .5
+		opacity: .8
 		y: i * 300
 
 	user = new Layer
