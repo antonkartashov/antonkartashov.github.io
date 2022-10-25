@@ -163,13 +163,27 @@ let sheet2 = new Layer ({
   backgroundColor: 'white',
 });
 
-let headline = new Layer ({
+let waitingForOffers = new Layer({
   parent: sheet2,
-  image: 'images/headline.png',
+  image: 'images/waiting-for-offers.png',
   width: 375, height: 90,
   x: -80, y: 3,
   opacity: 0
 });
+
+waitingForOffers.threeDotsLoading = new Layer({
+  parent: waitingForOffers,
+  clip: true,
+  width: 40, height: 40,
+  backgroundColor: 'tomato'
+});
+
+for (let i = 0; i < 3; i++) {
+  new Layer({
+    backgroundColor: 'black',
+    
+  })
+};
 
 
 
@@ -286,14 +300,14 @@ sheet1.onTap(()=> {
     }
   });
 
-  headline.animate({
+  waitingForOffers.animate({
     x: 0, y: 0,
     options: {
-      curve: 'ease-out', time: .3,
+      curve: 'ease-out', time: .3
     }
   });
 
-  headline.animate({
+  waitingForOffers.animate({
     opacity: 1,
     options: {
       curve: 'ease-out', time: .3,
