@@ -83,7 +83,7 @@ player.draggable.constraints = {
 let bibliotekaAnimation = {
     // time: 3,
     // curve: 'ease-out',
-    curve: 'spring(180, 25, 0)'
+    curve: 'spring(100, 25, 0)'
 }
 
 mini.onTap(()=> {

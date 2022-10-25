@@ -97,9 +97,9 @@ player.draggable.constraints = {
 };
 
 let bibliotekaAnimation = {
-    time: 3,
-    curve: 'ease-out',
-    curve: 'spring(250, 25, 10)'
+    // time: 3,
+    // curve: 'ease-out',
+    curve: 'spring(100, 25, 0)'
 }
 
 mini.onTap(()=> {
@@ -146,7 +146,10 @@ player.onChange('y', ()=> {
 });
 
 closeButton.onTap(()=> {
-    player.animate({y: 674, options: bibliotekaAnimation});
+    player.animate({
+      y: 674,
+      options: bibliotekaAnimation
+    });
 });
 
 let status = new Layer ({

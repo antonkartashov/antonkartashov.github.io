@@ -1,4 +1,4 @@
-bg = new BackgroundLayer ({backgroundColor: '#666'})
+bg = new BackgroundLayer ({backgroundColor: '#eee'})
 
 let iPhoneX = {width: 375, height: 812}
 
@@ -43,19 +43,14 @@ let player = new Layer ({
     parent: phone,
     width: iPhoneX.width,
     height: 56 + iPhoneX.height,
-    // image: 'images/player bg.png',
-    backgroundColor: 'white',
-    shadowY: -1,
-    shadowBlur: 1,
-    shadowColor: 'rgba(0, 0, 0, .15)',
-    y: 674,
-    clip: true
+    image: 'images/player bg.png',
+    y: 674
 });
 
 let fullscreen = new Layer ({
     parent: player,
     size: iPhoneX,
-    image: 'images/PlayerFullscreen.png',
+    image: 'images/Player Fullscreen.png',
     // backgroundColor: 'aquamarine',
     y: 56,
     opacity: 0
@@ -77,7 +72,7 @@ let white = new Layer ({
 
 let mini = new Layer ({
     parent: player,
-    image: 'images/PlayerMini.png',
+    image: 'images/Player Mini.png',
     // backgroundColor: 'tomato',
     width: iPhoneX.width,
     height: 57
@@ -86,7 +81,7 @@ let mini = new Layer ({
 
 let tabBar = new Layer ({
     parent: phone,
-    image: 'images/TabBar.png',
+    image: 'images/Tab Bar.png',
     // backgroundColor: 'gold',
     width: iPhoneX.width,
     height: 84,
@@ -102,9 +97,9 @@ player.draggable.constraints = {
 };
 
 let bibliotekaAnimation = {
-    time: 3,
-    curve: 'ease-out',
-    curve: 'spring(250, 25, 10)'
+    // time: 3,
+    // curve: 'ease-out',
+    curve: 'spring(100, 25, 0)'
 }
 
 mini.onTap(()=> {
@@ -127,7 +122,7 @@ player.onChange('y', ()=> {
     );
 
     fullscreen.opacity = Utils.modulate(
-        player.y, [674 - 56 - 30, 300],
+        player.y, [674 - 56, 0],
                   [0,   1]
     );
 
@@ -151,18 +146,21 @@ player.onChange('y', ()=> {
 });
 
 closeButton.onTap(()=> {
-    player.animate({y: 674, options: bibliotekaAnimation});
+    player.animate({
+      y: 674,
+      options: bibliotekaAnimation
+    });
 });
 
 let status = new Layer ({
-    image: 'StatusBar.png',
+    image: 'Status Bar.png',
     width: iPhoneX.width,
     height: 44,
     parent: phone,
 });
 
 let displayShape = new Layer ({
-    image: 'DisplayShape.png',
+    image: 'display Shape.png',
     width: iPhoneX.width + 80,
     height: iPhoneX.height + 80,
     scale: phone.scale,
