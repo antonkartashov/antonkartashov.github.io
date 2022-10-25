@@ -7,26 +7,26 @@
     <link rel="alternate" href="http://learnframer.ru/feed.xml" type="application/rss+xml" title="Блог о прототипировании интерактивных продуктов">
     <title>Импорт макета из Sketch во&nbsp;Framer — Learn Framer
     </title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="https://antonkartashov.github.io/learnframer/css/main.css">
+    <link rel="stylesheet" href="https://antonkartashov.github.io/learnframer/css/highlight.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,800italic,700italic,700,600italic,600,400italic,300italic,300&amp;subset=latin,cyrillic,cyrillic-ext,latin-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700&amp;subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">	
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700&amp;subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
   </head>
   <body>
     <header>
       <ul>
-        <li><a href="/">Learn Framer</a></li>
+        <li><a href="https://antonkartashov.github.io/learnframer">Learn Framer</a></li>
         <li>
           <nobr><a href="http://learnframer.ru/slack">Слэк</a><span class="dot"> &nbsp; </span><a href="https://www.facebook.com/groups/prototypingclub/" target="_blank">Фейсбук</a></nobr>
         </li>
       </ul>
     </header>
     <div class="content">
-      <h1>Импорт макета из Sketch во&nbsp;Framer</h1><small><span><a href="http://facebook.com/antonkartashov" target="_blank">Антон Карташов</a></span><span class="dot"> •</span><span><a href="/articles/sketch-tips/">
+      <h1>Импорт макета из Sketch во&nbsp;Framer</h1><small><span><a href="http://facebook.com/antonkartashov" target="_blank">Антон Карташов</a></span><span class="dot"> •</span><span><a href="https://antonkartashov.github.io/learnframerhttps://antonkartashov.github.io/learnframer/articles/sketch-tips/">
                   <time datetime="2016-03-18T12:00:00+03:00" title="Fri Mar 18 2016 12:00:00 GMT+0300">18 марта&nbsp;2016</time></a></span></small>
       <article><p>Код — инструмент без ограничений. Но есть задачи, решать которые через программирование не самый легкий и, главное, не самый эффективный путь. Грамотная организация импорта из Скетча во Фреймер позволит этим инструментам дополнять друг друга: как можно раньше проверять гипотезы в интерактиве, вносить изменения в макет и моментально применять их к прототипу.</p>
 <hr>
-<p><img src="/articles/sketch-tips/sketch.png" alt="Framer + Sketch"></p>
+<p><img src="https://antonkartashov.github.io/learnframer/articles/sketch-tips/sketch.png" alt="Framer + Sketch"></p>
 <p>Фишки импорта во Фреймере:</p>
 <ol>
 <li>Все слои переносятся из Скетча в один клик. Фреймер сам расставляет их на холсте, поэтому «версткой» прототипа заниматься не придется.</li>
@@ -37,7 +37,7 @@
 <h2 id="-">Как устроен импорт слоев</h2>
 <p>Слоем во Фреймере становится каждая группа или символ из Скетча. Вложенность папок сохраняется (артборды в это случае тоже считаются группой). </p>
 <p>Все несгруппированные слои (как фигуры, так и текст) будут слиты в растровую картинку и станут фоновым изображением той папки, внутри которой они лежат.</p>
-<p><img src="/articles/sketch-tips/02-layers.png" alt="Layers">
+<p><img src="https://antonkartashov.github.io/learnframer/articles/sketch-tips/02-layers.png" alt="Layers">
 <small>Слои Show More Copy, NEARBY и Rectangle 1119 станут фоном слоя nearby</small></p>
 <p>В коде к слоям можно обращаться по их именам с приставкой <code>sketch.</code>:</p>
 <pre><code class="lang-CoffeeScript"><span class="comment"># Правильно (sketch.слой.свойство):</span>
@@ -76,7 +76,7 @@ sketch.nearby.Parking_Copy.opacity = <span class="number">0.25</span>
 <div class="iframe">
     <img class="ratio">
     <iframe
-        src="https://player.vimeo.com/video/158648874?autoplay=1&loop=1&title=0&byline=0&portrait=0" 
+        src="https://player.vimeo.com/video/158648874?autoplay=1&loop=1&title=0&byline=0&portrait=0"
         frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
     </iframe>
 </div>
@@ -86,12 +86,12 @@ sketch.nearby.Parking_Copy.opacity = <span class="number">0.25</span>
 <p>Просто в имени слоя укажите расширение <code>.pdf</code>. Использование точки в именах переменных запрещено, поэтому придется обращаться к слою так:</p>
 <pre><code class="lang-CoffeeScript">sketch[<span class="string">"icon.pdf"</span>].opacity = <span class="number">0.25</span>
 </code></pre>
-<p><img src="/articles/sketch-tips/vector.png" alt="Vector in PDF">
+<p><img src="https://antonkartashov.github.io/learnframer/articles/sketch-tips/vector.png" alt="Vector in PDF">
 <small>Теперь никакой размытой графики при увеличении в 20 раз</small></p>
 <hr>
 <h2 id="-">Не импортируйте лишние слои</h2>
 <p>Сгруппируйте их в папку, название которой заканчивается символом «<code>*</code>», и Фреймер сольет все ее содерживое в одно растровое изображение.</p>
-<p><img src="/articles/sketch-tips/flattening.png" alt="Flattening">
+<p><img src="https://antonkartashov.github.io/learnframer/articles/sketch-tips/flattening.png" alt="Flattening">
 <small>Во Фреймер экспортируется только один слой — <code>status_bar_light</code></small></p>
 <hr>
 <h2 id="-">Работайте со слоями как с массивами</h2>
@@ -101,7 +101,7 @@ sketch.nearby.Parking_Copy.opacity = <span class="number">0.25</span>
     sketch.Artboard.children[i].x += <span class="number">20</span>
 </code></pre>
 <p>Либо мы можем уменьшить непрозрачность всех слоев внутри папки <code>megagroup</code> до 20%:</p>
-<p><img src="/articles/sketch-tips/children.png" alt="Layer Children">
+<p><img src="https://antonkartashov.github.io/learnframer/articles/sketch-tips/children.png" alt="Layer Children">
 <small>Мы присвоили перменной <code>layer</code> все 8 слоев внутри <code>megagroup</code>. Теперь одной стройкой кода мы можем вывести их имена либо поменять прозрачность</small></p>
 <p>В записи с диапазоном <code>[0..9]</code> неудобно то, что нужно заранее знать, сколько слоев внутри группы. Этого можно избежать: специально для массивов в CoffeeScript есть отдельный вид циклов <code>for—in</code>:</p>
 <pre><code class="lang-CoffeeScript"><span class="comment"># Подвинуть все слои внутри megagroup на 20px вправо</span>
@@ -123,7 +123,7 @@ sketch.nearby.Parking_Copy.opacity = <span class="number">0.25</span>
 <pre><code class="lang-CoffeeScript"><span class="keyword">for</span> k, layer <span class="keyword">of</span> sketch
     layer.visible = <span class="literal">false</span>
 </code></pre>
-<p><img src="/articles/sketch-tips/04-sketch-object.png" alt="">
+<p><img src="https://antonkartashov.github.io/learnframer/articles/sketch-tips/04-sketch-object.png" alt="">
 <small>Внутри объекта sketch все слои хранятся без учета иерархии и в обратном порядке</small></p>
 <hr>
 <h2 id="-">Работайте с относительными значениями</h2>
@@ -138,7 +138,7 @@ sketch.card.width  = Screen.width - <span class="number">100</span>
 sketch.background.size  = Screen.size
 </code></pre>
 <p>Чтобы не повторять каждый раз приставку <code>sketch.layer.</code> в каждой строке, можно использовать атрибут <code>props</code>:</p>
-<pre><code class="lang-CoffeeScript">sketch.card.props = 
+<pre><code class="lang-CoffeeScript">sketch.card.props =
     <span class="attribute">height</span>:  Screen.height * <span class="number">0.4</span> + <span class="number">20</span>
     <span class="attribute">width</span>:   Screen.width - <span class="number">100</span>
     <span class="attribute">opacity</span>: <span class="number">0.5</span>
@@ -169,7 +169,7 @@ sketch.card.midY = Screen.height / <span class="number">2</span>
           	s.setAttribute('data-timestamp', +new Date());
           	(d.head || d.body).appendChild(s);
           })();
-          
+
         </script>
         <noscript>
           <p>please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></p>
@@ -191,15 +191,15 @@ sketch.card.midY = Screen.height / <span class="number">2</span>
       	});
       	} catch(e) { }
       	});
-      
+
       	var n = d.getElementsByTagName("script")[0],
       		s = d.createElement("script"),
       		f = function () {n.parentNode.insertBefore(s, n);};
       		s.type = "text/javascript";
-      	
+
       	s.async = true;
       	s.src = "https://mc.yandex.ru/metrika/watch.js";
-      	
+
       	if (w.opera == "[object Opera]") {
       		d.addEventListener("DOMContentLoaded", f, false);
       	} else {f();}
