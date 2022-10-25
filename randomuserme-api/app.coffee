@@ -18,9 +18,9 @@ for item, i in handle
 	user = new Layer
 		image: item.picture.medium
 
-		width: 180, height: 180
+		width: 160, height: 160
 		x: Align.center
-		y: i * 300
+		y: i * 300 + 20
 		borderRadius: "50%"
 		borderWidth: 3
 		borderColor: "rgba(255, 255, 255, .9)"
@@ -28,9 +28,9 @@ for item, i in handle
 	headline = new Layer
 		html: "#{first} #{last}"
 		style:
-			textAlign: "center"
-			fontFamily: "Roboto Mono"
-			fontSize: "23pt"
+			'text-align' : 'center'
+			'font-family' : 'Roboto Mono'
+			'font-size' : '24pt'
 		y: i * 300 + 220
 		width: 750
 		backgroundColor: ""
