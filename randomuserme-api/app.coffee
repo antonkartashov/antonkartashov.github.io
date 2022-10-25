@@ -10,8 +10,7 @@ for item, i in handle
 
 	bg = new Layer
 		image: Utils.randomImage()
-		backgroundColor: "aquamarine"
-
+		backgroundColor: Utils.randomColor()
 		width: 750, height: 300
 		opacity: .5
 		y: i * 300
