@@ -7,22 +7,22 @@
     <link rel="alternate" href="http://learnframer.ru/feed.xml" type="application/rss+xml" title="Блог о прототипировании интерактивных продуктов">
     <title>Основы  CoffeeScript во&nbsp;Framer — Learn Framer
     </title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="https://antonkartashov.github.io/learnframer/css/main.css">
+    <link rel="stylesheet" href="https://antonkartashov.github.io/learnframer/css/highlight.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,800italic,700italic,700,600italic,600,400italic,300italic,300&amp;subset=latin,cyrillic,cyrillic-ext,latin-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700&amp;subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">	
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700&amp;subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Roboto+Mono&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
   </head>
   <body>
     <header>
       <ul>
-        <li><a href="/">Learn Framer</a></li>
+        <li><a href="https://antonkartashov.github.io/learnframer">Learn Framer</a></li>
         <li>
           <nobr><a href="http://learnframer.ru/slack">Слэк</a><span class="dot"> &nbsp; </span><a href="https://www.facebook.com/groups/prototypingclub/" target="_blank">Фейсбук</a></nobr>
         </li>
       </ul>
     </header>
     <div class="content">
-      <h1>Основы  CoffeeScript во&nbsp;Framer</h1><small><span><a href="http://facebook.com/antonkartashov" target="_blank">Антон Карташов</a></span><span class="dot"> •</span><span><a href="/articles/basics/">
+      <h1>Основы  CoffeeScript во&nbsp;Framer</h1><small><span><a href="http://facebook.com/antonkartashov" target="_blank">Антон Карташов</a></span><span class="dot"> •</span><span><a href="https://antonkartashov.github.io/learnframer/articles/basics/">
                   <time datetime="2016-03-18T04:00:00+03:00" title="Fri Mar 18 2016 04:00:00 GMT+0300">18 марта&nbsp;2016</time></a></span></small>
       <article><p>Без основ программирования овладеть Фреймером сложно: непонятны ни документация, ни чужие примеры; постоянные ошибки исправляются долго; а код не ощущается как удобный и послушный инструмент. Основы не так сложны, как может показаться.</p>
 <hr>
@@ -69,9 +69,9 @@ b = <span class="literal">false</span>
 <p>Код может выполняться не только по порядку строка за строкой. Используя сравнения, мы можем попросить программу выбрать один из двух (или более) возможных вариантов:</p>
 <pre><code class="lang-CoffeeScript">b = <span class="number">3</span>
 
-<span class="keyword">if</span> b &lt; <span class="number">2</span> 
+<span class="keyword">if</span> b &lt; <span class="number">2</span>
     <span class="built_in">print</span> <span class="string">'Less than two'</span>
-<span class="keyword">else</span> 
+<span class="keyword">else</span>
     <span class="built_in">print</span> <span class="string">'Greater than or equal to two'</span>
 
 <span class="comment"># » "Greater than or equal to two"</span>
@@ -82,7 +82,7 @@ b = <span class="literal">false</span>
 <span class="keyword">if</span> (b &lt; <span class="number">2</span>) {
     print(<span class="string">'Less than two'</span>);
 } <span class="keyword">else</span> {
-    print(<span class="string">'Greater than or equal to two'</span>);    
+    print(<span class="string">'Greater than or equal to two'</span>);
 }
 </code></pre>
 <hr>
@@ -140,7 +140,7 @@ b = <span class="literal">false</span>
     x + y
 
 <span class="comment"># Вызов функции</span>
-a = sum(<span class="number">2</span>, <span class="number">2</span>)       
+a = sum(<span class="number">2</span>, <span class="number">2</span>)
 b = sum(<span class="number">5</span> + <span class="number">5</span>, <span class="number">20</span>)
 c = sum(a, b)
 
@@ -177,7 +177,7 @@ prod()
 <hr>
 <h2 id="-">Объекты</h2>
 <p>Если говорить грубо, то объект — это набор переменных, объединенных одним именем. Создание объекта выглядит так:</p>
-<pre><code class="lang-CoffeeScript">designer = 
+<pre><code class="lang-CoffeeScript">designer =
     <span class="attribute">name</span>:  <span class="string">'Anton'</span>
     <span class="attribute">city</span>:  <span class="string">'Moscow'</span>
     <span class="attribute">age</span>:    <span class="number">29</span>
@@ -250,7 +250,7 @@ layerA.onClick -&gt; layerA.x = <span class="number">0</span>
 <span class="comment"># » 220</span>
 </code></pre>
 <p>Конструкторы нужны, чтобы писать свои собственные компоненты и модули. В них можно предусмотреть количество и тип параметров, дать каждому свойству имя, настроить значения по умолчанию. </p>
-<pre><code class="lang-CoffeeScript"><span class="function"><span class="title">Student</span> = <span class="params">(obj)</span> -&gt;</span> 
+<pre><code class="lang-CoffeeScript"><span class="function"><span class="title">Student</span> = <span class="params">(obj)</span> -&gt;</span>
     <span class="keyword">this</span>.name = obj.name ? <span class="string">'Ivan'</span>
     <span class="keyword">this</span>.age  = obj.age  ?  <span class="number">17</span>
     <span class="keyword">this</span>.city = obj.city ? <span class="string">'Moscow'</span>
@@ -311,7 +311,7 @@ layerA.onClick -&gt; layerA.x = <span class="number">0</span>
 <p>По умолчанию Layer создает полупрозрачный синий квадрат размером 100×100 пикселей и размещает его по координате (0, 0) — в левом верхнем углу телефона.</p>
 <p><img src="/articles/basics/newLayer.png" alt="new Layer"></p>
 <p>Попробуем вывести значения свойств, которые мы не задавали:</p>
-<pre><code class="lang-CoffeeScript">layerA = <span class="keyword">new</span> Layer 
+<pre><code class="lang-CoffeeScript">layerA = <span class="keyword">new</span> Layer
 
 <span class="built_in">print</span> layerA.opacity
 <span class="built_in">print</span> layerA.width
@@ -354,7 +354,7 @@ layerA.onClick(makeRed)
 <p>А без скобок:</p>
 <pre><code class="lang-CoffeeScript">layerA.onClick -&gt; layerA.backgroundColor = <span class="string">"red"</span>
 
-layerA.onClick -&gt; 
+layerA.onClick -&gt;
     layerA.backgroundColor = <span class="string">"red"</span>
 </code></pre>
 <p><img src="/articles/basics/exercise.png" alt="">
@@ -373,7 +373,7 @@ layerA.onClick -&gt;
           	s.setAttribute('data-timestamp', +new Date());
           	(d.head || d.body).appendChild(s);
           })();
-          
+
         </script>
         <noscript>
           <p>please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></p>
@@ -395,15 +395,15 @@ layerA.onClick -&gt;
       	});
       	} catch(e) { }
       	});
-      
+
       	var n = d.getElementsByTagName("script")[0],
       		s = d.createElement("script"),
       		f = function () {n.parentNode.insertBefore(s, n);};
       		s.type = "text/javascript";
-      	
+
       	s.async = true;
       	s.src = "https://mc.yandex.ru/metrika/watch.js";
-      	
+
       	if (w.opera == "[object Opera]") {
       		d.addEventListener("DOMContentLoaded", f, false);
       	} else {f();}
