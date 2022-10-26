@@ -306,7 +306,7 @@ let random = function(start, end) {
   return Utils.round(Utils.randomNumber(start, end));
 };
 
-sheet1.onTap(()=> {
+sheet1.onTap(function() {
   sheet1.animate({
     y: 812 + 3,
     options: {
@@ -524,7 +524,7 @@ let light = function() {
     }
   };
 
-  light1.onStateSwitchEnd((q, state) => {
+  light1.onStateSwitchEnd(function(event, state) {
     if (state == 'stateB') {
       light1.animate('stateA');
     } else if (state == 'stateA') {
@@ -532,7 +532,7 @@ let light = function() {
     }
   });
 
-  light2.onStateSwitchEnd((q, state) => {
+  light2.onStateSwitchEnd(function(event, state) {
     if (state == 'stateB') {
       light2.animate('stateA');
     } else if (state == 'stateA') {
