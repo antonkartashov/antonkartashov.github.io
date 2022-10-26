@@ -20,7 +20,7 @@ for item, i in handle
 
 		width: 160, height: 160
 		x: Align.center
-		y: i * 302 + 35
+		y: i * 302 + 40
 		borderRadius: "50%"
 		borderWidth: 3
 		borderColor: "rgba(255, 255, 255, .9)"
@@ -31,6 +31,6 @@ for item, i in handle
 			'text-align' : 'center'
 			'font-family' : 'Roboto Mono'
 			'font-size' : '24pt'
-		y: i * 302 + 220
+		y: i * 302 + 225
 		width: 750
 		backgroundColor: ""
