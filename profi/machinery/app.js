@@ -217,9 +217,6 @@ Utils.interval(1, function() {
 
 
 
-
-
-
 let userpics = [
   'images/userpic1.png',
   'images/userpic2.png',
@@ -253,7 +250,6 @@ for (let i = 0; i < 6; i++) {
 
   columns.push(i + 1);
 };
-
 
 
 
@@ -591,4 +587,4 @@ switcherGrid.onStateSwitchEnd(function() {
   };
 });
 
-// switcherGrid.animate('on');
+switcherGrid.animate('on');
