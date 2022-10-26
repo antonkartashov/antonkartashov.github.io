@@ -173,17 +173,49 @@ let waitingForOffers = new Layer({
 
 waitingForOffers.threeDotsLoading = new Layer({
   parent: waitingForOffers,
-  clip: true,
   width: 40, height: 40,
-  backgroundColor: 'tomato'
+  x: 235, y: 24,
+  backgroundColor: 'rgba(255, 0, 0, 0)'
 });
 
+let threeDotsLoadingArray = [];
+
 for (let i = 0; i < 3; i++) {
-  new Layer({
-    backgroundColor: 'black',
-    
-  })
+  threeDotsLoadingArray[i] = new Layer({
+    parent: waitingForOffers.threeDotsLoading,
+    backgroundColor: '#181818',
+    size: 3,
+    borderRadius: 100,
+    x: i * 6, y: 25.5
+  });
+
+  threeDotsLoadingArray[i].states = {
+    disappearance: {
+      scale: 0,
+      // y: 27.5,
+      options: {
+        curve: 'spring(50, 7, 0)',
+        delay: (2 - i) * .25
+      }
+    },
+    appearance: {
+      scale: 1,
+      // y: 25.5,
+      options: {
+        curve: 'spring(50, 7, 0)',
+        delay: i * .25
+      }
+    }
+  };
 };
+
+Utils.interval(1, function() {
+  for (let dot of threeDotsLoadingArray) {
+    dot.stateCycle('appearance', 'disappearance');
+  }
+})
+
+
 
 
 
