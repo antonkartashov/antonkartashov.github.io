@@ -113,24 +113,25 @@ let screen = new Layer ({
   y: Align.center(-2),
   scale: Screen.height / 812 * 0.9,
   backgroundColor: 'white',
-  clip: true
+  clip: true,
+  borderRadius: 50
 });
 
 
 /* Prototype Settings */
 
 let description = new Layer({
-  x: 20, y: 20,
+  x: 30, y: 25,
   height: 50, width: 300,
   backgroundColor: 'rgba(255, 255, 255, 0.05)',
   backgroundColor: 'rgba(255, 255, 255, 0)',
   style: textStyle,
   color: 'rgba(255, 255, 255, .4)',
-  html: 'Чтобы запустить анимацию, кликните на&nbsp;экран телефона.'
+  html: '<b>Профи Икс</b><br>Анимация машинерии'
 });
 
 let switcherGrid = new Toggle({
-  x: 20, y: 100,
+  x: 30, y: 110,
   caption: 'Сетка для анимации',
   // backgroundColor: 'rgba(255, 255, 255, 0.05)',
   randomColor: 'tomato'
@@ -594,4 +595,4 @@ switcherGrid.onStateSwitchEnd(function() {
   };
 });
 
-switcherGrid.animate('on');
+// switcherGrid.animate('on');
