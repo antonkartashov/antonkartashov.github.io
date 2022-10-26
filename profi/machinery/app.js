@@ -306,7 +306,7 @@ let random = function(start, end) {
   return Utils.round(Utils.randomNumber(start, end));
 };
 
-sheet1.onTap(function() {
+Utils.delay(2, function() {
   sheet1.animate({
     y: 812 + 3,
     options: {
@@ -544,7 +544,8 @@ let light = function() {
   light2.animate('stateB');
 }();
 
-// Grid
+
+/* Phone */
 
 let status = new Layer ({
   image: 'statusbar.png',
@@ -563,20 +564,26 @@ let displayShape = new Layer ({
   y: Align.center(-2)
 });
 
+
+/* Grid */
+
 let grid = new Layer({
   parent: screen,
   image: 'images/axis.png',
   width: 375, height: 285,
-  y: Align.bottom(),
+  y: Align.bottom(10),
+  scale: 1.05,
   opacity: 0
 });
 
 grid.states.visible = {
-  opacity: 1
+  opacity: 1,
+  scale: 1,
+  y: Align.bottom()
 };
 
 grid.states.animationOptions = {
-  time: .3
+  curve: 'spring(150, 15, 0)'
 }
 
 switcherGrid.onStateSwitchEnd(function() {
