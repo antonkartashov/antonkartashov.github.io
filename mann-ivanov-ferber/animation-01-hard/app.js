@@ -205,6 +205,5 @@ let displayShape = new Layer ({
     width: iPhoneX.width + 80,
     height: iPhoneX.height + 80,
     scale: phone.scale,
-    // opacity: .8,
     point: Align.center()
 });
