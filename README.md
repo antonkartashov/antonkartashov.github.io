@@ -1,5 +1,4 @@
 # Design Prototypes
-
 https://antonkartashov.github.io/
 
 [Profi X](https://antonkartashov.github.io/profi/machinery), 2022
