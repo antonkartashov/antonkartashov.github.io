@@ -549,14 +549,13 @@ let light = function() {
 /* Phone */
 
 let status = new Layer ({
-  image: 'statusbar.png',
-  width: device.width,
-  height: 141/3.12,
+  image: 'images/statusbar.png',
+  width: 375, height: 56,
   parent: screen,
 });
 
 let displayShape = new Layer ({
-  image: 'DisplayShape.png',
+  image: 'images/iphone-14-display-shape.png',
   width: device.width + 84,
   height: device.height + 84,
   scale: screen.scale,
