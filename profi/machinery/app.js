@@ -103,15 +103,11 @@ let pageColor = new BackgroundLayer ({
   backgroundColor: '#0a0a0a'
 });
 
-let device = {
-  width: 375, height: 812
-};
-
 let screen = new Layer ({
-  size: device,
-  x: Align.center(),
-  y: Align.center(-2),
+  width: 375, height: 812,
+  point: Align.center(),
   scale: Screen.height / 812 * 0.9,
+  // scale: 1,
   backgroundColor: 'white',
   clip: true,
   borderRadius: 50
@@ -292,7 +288,7 @@ orderStatus.views = new Layer({
   html: '14',
   style: {
     'font-size': '15px',
-    'font-family': 'SF Pro Text',
+    'font-family': '"SF Pro Text", "Helvetica"',
     'font-weight': '500',
     'color': 'white',
     'line-height': '22px',
@@ -556,8 +552,8 @@ let status = new Layer ({
 
 let displayShape = new Layer ({
   image: 'images/iphone-14-display-shape.png',
-  width: device.width + 84,
-  height: device.height + 84,
+  width: screen.width + 84,
+  height: screen.height + 84,
   scale: screen.scale,
   // opacity: .2,
   x: Align.center(),
