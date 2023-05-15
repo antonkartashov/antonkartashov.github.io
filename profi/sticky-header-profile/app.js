@@ -138,16 +138,9 @@ let switcherGrid = new Toggle({
 /* Design Layout */
 
 let background = new Layer ({
-  image: 'images/Background@3x.png',
+  image: 'images/Background.png',
   width: 375, height: 812,
   parent: screen
-});
-
-let blackout = new Layer ({
-  backgroundColor: 'black',
-  width: 375, height: 812,
-  parent: screen,
-  opacity: 0
 });
 
 // Lighters
@@ -226,163 +219,133 @@ let light = function() {
 let marginTop1 = 116;
 let marginTop2 = 112;
 
-let orderTitle = new Layer ({
-  image: 'images/TitleBig@3x.png',
-  width: 375, height: 80,
-  parent: screen,
-  y: 124
-});
-
-// let scrollBack = new Layer ({
-//   size: screen.size,
-//   parent: screen,
-//   borderRadius: 32,
-//   y: marginTop1 + marginTop2,
-//   backgroundColor: 'white'
-// });
-
 let scroll = new ScrollComponent ({
-  parent: screen,
-  width: 375, height: 696, y: marginTop1,
-  scrollHorizontal: false,
+  parent: screen, y: 128,
+  width: 375, height: screen.height - 128,
   borderRadius: 32,
-  clip: true
+  clip: true,
+  backgroundColor: 'white',
+  scrollHorizontal: false,
 });
 
 scroll.content.clip = false;
 
-let scrollContent = new Layer ({
-  width: scroll.width,
-  height: scroll.height + 60,
-  parent: scroll.content,
-  y: marginTop2,
-  backgroundColor: 'rgba(200, 0, 0, .5)',
+let group = new Layer ({
+  width: 375, height: 464,
   backgroundColor: 'rgba(0,0,0,0)',
-  clip: false
+  parent: scroll.content
 });
 
-let scrollContentBack = new Layer ({
-  width: scroll.width,
-  height: 5000,
-  clip: true,
-  borderRadius: 32,
-  parent: scrollContent,
-  y: marginTop2,
-  backgroundColor: 'white'
-});
-
-let gap = new Layer ({
-  width: 375, height: 32+2 + 32+2 + 3,
-  parent: scrollContent,
+let greyblock = new Layer ({
+  width: 375, height: 464 + 1000,
   backgroundColor: '#F4F5F8',
-  y: 416 - 32-2 - 1.5
+  parent: group,
+  y: -1000
 });
 
-let offers = new Layer ({
-  width: 375, height: 416,
-  parent: scrollContent,
-  image: 'images/Offers@3x.png',
-  borderRadius: 32,
-  clip: true
+let userpic = new Layer ({
+  width: 102, height: 136,
+  borderRadius: 18,
+  clip: true,
+  image: 'images/Userpic.png',
+  parent: group,
+  y: 40, x: 375/2 - 102/2
 });
 
-let send = new Layer ({
-  width: 375, height: 194,
-  parent: scrollContent,
-  image: 'images/Sent@3x.png',
-  borderRadius: 32,
-  y: offers.height + 3,
-  clip: true
+let nameBig = new Layer ({
+  width: 180, height: 48,
+  image: 'images/nameBig.png',
+  parent: group,
+  y: 200, x: 375/2 - 180/2
 });
 
-
-let statusStatus = new Layer ({
-  width: 375, height: 24,
-  parent: screen,
-  image: 'images/Status-Status@3x.png',
-  y: 75
+let badges = new Layer ({
+  width: 412, height: 84,
+  image: 'images/Badges.png',
+  parent: group,
+  y: 272, x: 24
 });
 
-statusStatus.states = {
+let button = new Layer ({
+  width: 327, height: 60,
+  image: 'images/Button.png',
+  parent: group,
+  y: 380, x: 24
+});
+
+let Details = new Layer ({
+  width: 375, height: 938,
+  image: 'images/Details.png',
+  parent: scroll.content,
+  y: 464 + 24
+});
+
+new Layer ({
+  width: 375, height: 1,
+  backgroundColor: 'rgba(0,0,0,0)',
+  parent: scroll.content,
+  y: 1500
+});
+
+let header = new Layer ({
+  width: 375, height: 90,
+  backgroundColor: 'white',
+  shadowX: 0,
+  shadowY: .5,
+  shadowBlur: 0,
+  shadowColor: 'rgba(0,0,0,.1)',
+  parent: scroll
+});
+
+new Layer ({
+  width: 253, height: 46,
+  image: 'images/NameSmall.png',
+  parent: header,
+  x: 62, y: 40
+});
+
+new Layer ({
+  width: 30, height: 40,
+  image: 'images/Userpic.png',
+  parent: header,
+  x: 24, y: 40,
+  borderRadius: 8
+});
+
+header.y -= header.height + 4;
+// -94
+
+header.states = {
   off: {
-    y: 75 - 10,
-    opacity: 0,
+    y: -94,
     animationOptions: {
       curve: 'spring(150, 25, 0)'
     }
   },
   on: {
-    y: 75,
-    opacity: 1,
+    y: 0,
     animationOptions: {
-      curve: 'spring(150, 25, 0)',
-      delay: .15
-    }
-  }
-};
-
-let statusTitle = new Layer ({
-  width: 375, height: 24,
-  parent: screen,
-  image: 'images/Status-Title@3x.png',
-  y: 75 + 10,
-  opacity: 0
-});
-
-statusTitle.states = {
-  off: {
-    y: 75 + 10,
-    opacity: 0,
-    animationOptions: {
-      curve: 'spring(150, 25, 0)',
-    }
-  },
-  on: {
-    y: 75,
-    opacity: 1,
-    animationOptions: {
-      curve: 'spring(150, 25, 0)',
-      delay: .15
+      curve: 'spring(150, 25, 0)'
     }
   }
 };
 
 scroll.content.onMove(function() {
-  if (scroll.content.y < -100) {
-    if (statusStatus.states.current.name != 'off') {
-      statusStatus.animate('off');
-    };
-    if (statusTitle.states.current.name != 'on') {
-      statusTitle.animate('on');
+  if (scroll.content.y < -160) {
+    if (header.states.current.name != 'on') {
+      header.animate('on');
     };
   } else {
-    if (statusStatus.states.current.name != 'on') {
-      statusStatus.animate('on');
-    };
-    if (statusTitle.states.current.name != 'off') {
-      statusTitle.animate('off');
+    if (header.states.current.name != 'off') {
+      header.animate('off');
     };
 
-    blackout.opacity = -1 * scroll.content.y / 200;
   };
-
-  orderTitle.y = 124 + scroll.content.y / 4;
-  orderTitle.opacity = 1 + scroll.content.y * .01 * 1
+  //
+  // orderTitle.y = 124 + scroll.content.y / 4;
+  // orderTitle.opacity = 1 + scroll.content.y * .01 * 1
 });
 
-
-let tsup = new Layer ({
-  image: 'images/Tsup@3x.png',
-  width: 112, height: 120,
-  parent: screen,
-  x: Align.right(),
-  y: Align.bottom()
-});
-
-tsup.onTap(function() {
-  statusStatus.stateCycle('on', 'off');
-  statusTitle.stateCycle('off', 'on');
-});
 
 /* Phone */
 
