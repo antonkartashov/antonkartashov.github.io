@@ -126,13 +126,13 @@ let description = new Layer({
   html: '<b>Profi X</b><br>Слопывание шапки'
 });
 
-let switcherGrid = new Toggle({
-  x: 30, y: 110,
-  caption: 'Сетка для анимации',
-  // backgroundColor: 'rgba(255, 255, 255, 0.05)',
-  randomColor: 'tomato'
-
-});
+// let switcherGrid = new Toggle({
+//   x: 30, y: 110,
+//   caption: 'Сетка для анимации',
+//   // backgroundColor: 'rgba(255, 255, 255, 0.05)',
+//   randomColor: 'tomato'
+//
+// });
 
 
 /* Design Layout */
@@ -383,31 +383,31 @@ let phoneStatusBar = new Layer ({
 
 /* Grid */
 
-let grid = new Layer({
-  parent: screen,
-  image: 'images/axis.png',
-  width: 375, height: 285,
-  y: Align.bottom(10),
-  scale: 1.05,
-  opacity: 0
-});
-
-grid.states.visible = {
-  opacity: 1,
-  scale: 1,
-  y: Align.bottom()
-};
-
-grid.states.animationOptions = {
-  curve: 'spring(150, 15, 0)'
-}
-
-switcherGrid.onStateSwitchEnd(function() {
-  if (this.states.current.name == 'on') {
-    grid.animate('visible');
-  } else if (this.states.current.name == 'off') {
-    grid.animate('default');
-  };
-});
+// let grid = new Layer({
+//   parent: screen,
+//   image: 'images/axis.png',
+//   width: 375, height: 285,
+//   y: Align.bottom(10),
+//   scale: 1.05,
+//   opacity: 0
+// });
+//
+// grid.states.visible = {
+//   opacity: 1,
+//   scale: 1,
+//   y: Align.bottom()
+// };
+//
+// grid.states.animationOptions = {
+//   curve: 'spring(150, 15, 0)'
+// }
+//
+// switcherGrid.onStateSwitchEnd(function() {
+//   if (this.states.current.name == 'on') {
+//     grid.animate('visible');
+//   } else if (this.states.current.name == 'off') {
+//     grid.animate('default');
+//   };
+// });
 
 // switcherGrid.animate('on');
