@@ -254,7 +254,7 @@ let userpic = new Layer ({
 
 let nameBig = new Layer ({
   width: 180, height: 48,
-  image: 'images/nameBigg.png',
+  image: 'images/NameBiggg.png',
   parent: group,
   y: 200, x: 375/2 - 180/2
 });
