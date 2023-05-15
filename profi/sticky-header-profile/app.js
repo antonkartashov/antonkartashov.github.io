@@ -123,7 +123,7 @@ let description = new Layer({
   backgroundColor: 'rgba(255, 255, 255, 0)',
   style: textStyle,
   color: 'rgba(255, 255, 255, .4)',
-  html: '<b>Profi X</b><br>Слопывание шапки'
+  html: '<b>Profi X</b><br>Схлопывание шапки на экране профиля'
 });
 
 // let switcherGrid = new Toggle({
