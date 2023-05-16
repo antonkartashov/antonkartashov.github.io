@@ -116,14 +116,20 @@ let screen = new Layer ({
 
 /* Prototype Settings */
 
+let descriptionTextColorGrey = 'rgba(255, 255, 255, .4)';
+let descriptionTextColorRed = 'tomato';
+
 let description = new Layer({
   x: 30, y: 25,
   height: 50, width: 300,
   backgroundColor: 'rgba(255, 255, 255, 0.05)',
   backgroundColor: 'rgba(255, 255, 255, 0)',
   style: textStyle,
-  color: 'rgba(255, 255, 255, .4)',
-  html: '<b>Profi X</b><br>Схлопывание шапки на&nbsp;экране профиля'
+  color: descriptionTextColorGrey,
+  html: `
+    <b>Profi X</b>
+    <p>Схлопывание шапки на&nbsp;экране профиля.</p><br>
+    <p>Scroll Y: 0</p>`
 });
 
 // let switcherGrid = new Toggle({
@@ -155,21 +161,19 @@ let scroll = new ScrollComponent ({
 
 scroll.content.clip = false;
 
-let user = new Layer ({
-  width: 375, height: 464,
-  parent: scroll.content,
-  image: 'images/User.jpg',
-  y: 40
-});
-
-
-
 
 let details = new Layer ({
   width: 375, height: 3117,
   image: 'images/Details.jpg',
   parent: scroll.content,
   y: 464 + 24,
+  y: 40
+});
+
+let user = new Layer ({
+  width: 375, height: 544,
+  parent: scroll.content,
+  image: 'images/User.png',
   y: 40
 });
 
@@ -203,19 +207,24 @@ header.states = {
 };
 
 scroll.content.onMove(function() {
-  if (scroll.content.y < -166) {
+  let textColor;
+
+  if (scroll.content.y <= -166) {
     if (header.states.current.name != 'on') {
       header.animate('on');
     };
+    textColor = descriptionTextColorRed;
   } else {
     if (header.states.current.name != 'off') {
       header.animate('off');
     };
-
+    textColor = descriptionTextColorGrey;
   };
-  //
-  // orderTitle.y = 124 + scroll.content.y / 4;
-  // orderTitle.opacity = 1 + scroll.content.y * .01 * 1
+
+  description.html = `
+    <b>Profi X</b>
+    <p>Схлопывание шапки на&nbsp;экране профиля.</p><br>
+    <p style='color: ${textColor}'>Scroll Y: ${-Math.round(scroll.content.y)}</p>`
 });
 
 
@@ -259,35 +268,3 @@ let grabber = new Layer ({
   borderRadius: 20,
   y: 54 + 15, x: Align.center()
 });
-
-
-/* Grid */
-
-// let grid = new Layer({
-//   parent: screen,
-//   image: 'images/axis.png',
-//   width: 375, height: 285,
-//   y: Align.bottom(10),
-//   scale: 1.05,
-//   opacity: 0
-// });
-//
-// grid.states.visible = {
-//   opacity: 1,
-//   scale: 1,
-//   y: Align.bottom()
-// };
-//
-// grid.states.animationOptions = {
-//   curve: 'spring(150, 15, 0)'
-// }
-//
-// switcherGrid.onStateSwitchEnd(function() {
-//   if (this.states.current.name == 'on') {
-//     grid.animate('visible');
-//   } else if (this.states.current.name == 'off') {
-//     grid.animate('default');
-//   };
-// });
-
-// switcherGrid.animate('on');
