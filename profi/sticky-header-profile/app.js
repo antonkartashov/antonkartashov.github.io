@@ -123,7 +123,7 @@ let description = new Layer({
   backgroundColor: 'rgba(255, 255, 255, 0)',
   style: textStyle,
   color: 'rgba(255, 255, 255, .4)',
-  html: '<b>Profi X</b><br>Схлопывание шапки на экране профиля'
+  html: '<b>Profi X</b><br>Схлопывание шапки на&nbsp;экране профиля'
 });
 
 // let switcherGrid = new Toggle({
@@ -138,90 +138,15 @@ let description = new Layer({
 /* Design Layout */
 
 let background = new Layer ({
-  image: 'images/Background.png',
+  backgroundColor: '#818187',
   width: 375, height: 812,
   parent: screen
 });
 
-// Lighters
-
-let light = function() {
-  let light1 = new Layer ({
-    parent: screen,
-    width: 10, height: 10,
-    x: 31, y: 83,
-    backgroundColor: '#2EB518',
-    borderRadius: 100,
-    opacity: .5,
-    scale: 1
-  })
-
-  light1.states = {
-    stateA: {
-      opacity: .5,
-      scale: .8,
-      options: {time: 3}
-    },
-    stateB: {
-      opacity: 1,
-      scale: 1,
-      options: {time: .5}
-    }
-  };
-
-  let light2 = new Layer ({
-    parent: screen,
-    width: 14, height: 14,
-    x: 29, y: 81,
-    backgroundColor: 'rbga(0, 0, 0, 0)',
-    borderWidth: 2,
-    borderColor: '#2EB518',
-    borderRadius: 100,
-    opacity: .5,
-    scale: 1
-  })
-
-  light2.states = {
-    stateA: {
-      opacity: 1,
-      scale: .5,
-      options: {time: 0}
-    },
-    stateB: {
-      opacity: 0,
-      scale: 1.5,
-      options: {time: 3.5}
-    }
-  };
-
-  light1.onStateSwitchEnd(function(event, state) {
-    if (state == 'stateB') {
-      light1.animate('stateA');
-    } else if (state == 'stateA') {
-      light1.animate('stateB');
-    }
-  });
-
-  light2.onStateSwitchEnd(function(event, state) {
-    if (state == 'stateB') {
-      light2.animate('stateA');
-    } else if (state == 'stateA') {
-      light2.animate('stateB');
-    }
-  });
-
-  light1.animate('stateB');
-  light2.animate('stateB');
-}();
-
-// Design
-
-let marginTop1 = 116;
-let marginTop2 = 112;
 
 let scroll = new ScrollComponent ({
-  parent: screen, y: 128,
-  width: 375, height: screen.height - 128,
+  parent: screen, y: 59,
+  width: 375, height: screen.height - 59,
   borderRadius: 32,
   clip: true,
   backgroundColor: 'white',
@@ -230,61 +155,22 @@ let scroll = new ScrollComponent ({
 
 scroll.content.clip = false;
 
-let group = new Layer ({
+let user = new Layer ({
   width: 375, height: 464,
-  backgroundColor: 'rgba(0,0,0,0)',
-  parent: scroll.content
-});
-
-let greyblock = new Layer ({
-  width: 375, height: 464 + 1000,
-  backgroundColor: '#F4F5F8',
-  parent: group,
-  y: -1000
-});
-
-let userpic = new Layer ({
-  width: 102, height: 136,
-  borderRadius: 18,
-  clip: true,
-  image: 'images/Userpic.png',
-  parent: group,
-  y: 40, x: 375/2 - 102/2
-});
-
-let nameBig = new Layer ({
-  width: 180, height: 48,
-  image: 'images/yo.png',
-  parent: group,
-  y: 200, x: 375/2 - 180/2
-});
-
-let badges = new Layer ({
-  width: 412, height: 84,
-  image: 'images/Badges.png',
-  parent: group,
-  y: 272, x: 24
-});
-
-let button = new Layer ({
-  width: 327, height: 60,
-  image: 'images/Button.png',
-  parent: group,
-  y: 380, x: 24
-});
-
-let Details = new Layer ({
-  width: 375, height: 938,
-  image: 'images/Details.png',
   parent: scroll.content,
-  y: 464 + 24
+  image: 'images/User.jpg',
+  y: 40
 });
 
-new Layer ({
-  width: 375, height: 1,
-  backgroundColor: 'rgba(0,0,0,0)',
+
+
+
+let details = new Layer ({
+  width: 375, height: 3117,
+  image: 'images/Details.jpg',
   parent: scroll.content,
-  y: 1500
+  y: 464 + 24,
+  y: 40
 });
 
 let header = new Layer ({
@@ -293,23 +179,9 @@ let header = new Layer ({
   shadowX: 0,
   shadowY: .5,
   shadowBlur: 0,
-  shadowColor: 'rgba(0,0,0,.1)',
+  shadowColor: 'rgba(31, 44, 71, .1)',
+  image: 'images/Header.png',
   parent: scroll
-});
-
-new Layer ({
-  width: 253, height: 46,
-  image: 'images/NameSmall.png',
-  parent: header,
-  x: 62, y: 40
-});
-
-new Layer ({
-  width: 30, height: 40,
-  image: 'images/Userpic.png',
-  parent: header,
-  x: 24, y: 40,
-  borderRadius: 8
 });
 
 header.y -= header.height + 4;
@@ -331,7 +203,7 @@ header.states = {
 };
 
 scroll.content.onMove(function() {
-  if (scroll.content.y < -160) {
+  if (scroll.content.y < -166) {
     if (header.states.current.name != 'on') {
       header.animate('on');
     };
@@ -378,6 +250,14 @@ let phoneStatusBar = new Layer ({
   parent: screen,
   width: 375, height: 56,
   image: 'images/StatusBar-iPhone@3x.png'
+});
+
+let grabber = new Layer ({
+  width: 41, height: 5,
+  opacity: .5, backgroundColor: '#D0D3DD',
+  parent: screen,
+  borderRadius: 20,
+  y: 54 + 15, x: Align.center()
 });
 
 
