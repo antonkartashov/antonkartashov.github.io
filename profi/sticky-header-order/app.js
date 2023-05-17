@@ -123,7 +123,10 @@ let description = new Layer({
   backgroundColor: 'rgba(255, 255, 255, 0)',
   style: textStyle,
   color: 'rgba(255, 255, 255, .4)',
-  html: '<b>Profi X</b><br>Схлопывание шапки на&nbsp;экране заказа'
+  html: `
+    <b>Profi X</b>
+    <p>Схлопывание шапки на&nbsp;экране заказа.</p><br>
+    <p>Scroll Y: 0</p>`
 });
 
 // let switcherGrid = new Toggle({
@@ -223,9 +226,6 @@ let light = function() {
 
 // Design
 
-let marginTop1 = 116;
-let marginTop2 = 112;
-
 let orderTitle = new Layer ({
   image: 'images/TitleBig@3x.png',
   width: 375, height: 80,
@@ -243,7 +243,8 @@ let orderTitle = new Layer ({
 
 let scroll = new ScrollComponent ({
   parent: screen,
-  width: 375, height: 696, y: marginTop1,
+  width: 375, height: 696,
+  y: 116,
   scrollHorizontal: false,
   borderRadius: 32,
   clip: true
@@ -253,9 +254,9 @@ scroll.content.clip = false;
 
 let scrollContent = new Layer ({
   width: scroll.width,
-  height: scroll.height + 60,
+  height: scroll.height,
   parent: scroll.content,
-  y: marginTop2,
+  y: 112,
   backgroundColor: 'rgba(200, 0, 0, .5)',
   backgroundColor: 'rgba(0,0,0,0)',
   clip: false
@@ -267,31 +268,14 @@ let scrollContentBack = new Layer ({
   clip: true,
   borderRadius: 32,
   parent: scrollContent,
-  y: marginTop2,
   backgroundColor: 'white'
 });
 
-let gap = new Layer ({
-  width: 375, height: 32+2 + 32+2 + 3,
+let list = new Layer ({
+  width: 375, height: 590,
   parent: scrollContent,
-  backgroundColor: '#F4F5F8',
-  y: 416 - 32-2 - 1.5
-});
-
-let offers = new Layer ({
-  width: 375, height: 416,
-  parent: scrollContent,
-  image: 'images/Offers@3x.png',
+  image: 'images/List.png',
   borderRadius: 32,
-  clip: true
-});
-
-let send = new Layer ({
-  width: 375, height: 194,
-  parent: scrollContent,
-  image: 'images/Sent@3x.png',
-  borderRadius: 32,
-  y: offers.height + 3,
   clip: true
 });
 
@@ -348,7 +332,10 @@ statusTitle.states = {
 };
 
 scroll.content.onMove(function() {
-  if (scroll.content.y < -100) {
+  let textColor;
+
+  if (scroll.content.y < (-112 + 10)) {
+    textColor = 'gold';
     if (statusStatus.states.current.name != 'off') {
       statusStatus.animate('off');
     };
@@ -356,6 +343,7 @@ scroll.content.onMove(function() {
       statusTitle.animate('on');
     };
   } else {
+    textColor = 'rgba(255, 255, 255, .4)';
     if (statusStatus.states.current.name != 'on') {
       statusStatus.animate('on');
     };
@@ -367,7 +355,12 @@ scroll.content.onMove(function() {
   };
 
   orderTitle.y = 124 + scroll.content.y / 4;
-  orderTitle.opacity = 1 + scroll.content.y * .01 * 1
+  orderTitle.opacity = 1 + scroll.content.y * .01 * 1;
+
+  description.html = `
+    <b>Profi X</b>
+    <p>Схлопывание шапки на&nbsp;экране заказа.</p><br>
+    <p style='color: ${textColor}'>Scroll Y: ${-Math.round(scroll.content.y)}</p>`
 });
 
 
@@ -416,35 +409,3 @@ let phoneStatusBar = new Layer ({
   width: 375, height: 56,
   image: 'images/StatusBar-iPhone@3x.png'
 });
-
-
-/* Grid */
-
-// let grid = new Layer({
-//   parent: screen,
-//   image: 'images/axis.png',
-//   width: 375, height: 285,
-//   y: Align.bottom(10),
-//   scale: 1.05,
-//   opacity: 0
-// });
-//
-// grid.states.visible = {
-//   opacity: 1,
-//   scale: 1,
-//   y: Align.bottom()
-// };
-//
-// grid.states.animationOptions = {
-//   curve: 'spring(150, 15, 0)'
-// }
-//
-// switcherGrid.onStateSwitchEnd(function() {
-//   if (this.states.current.name == 'on') {
-//     grid.animate('visible');
-//   } else if (this.states.current.name == 'off') {
-//     grid.animate('default');
-//   };
-// });
-
-// switcherGrid.animate('on');
