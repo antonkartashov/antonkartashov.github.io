@@ -167,15 +167,85 @@ let details = new Layer ({
   image: 'images/Details.jpg',
   parent: scroll.content,
   y: 464 + 24,
-  y: 40
+  y: 60
 });
 
 let user = new Layer ({
   width: 375, height: 544,
   parent: scroll.content,
   image: 'images/User.png',
-  y: 40
+  y: 60
 });
+
+let dots = new Layer({
+  size: 24,
+  image: 'images/Dots.png',
+  parent: scroll.content,
+  y: 26, x: 331
+});
+
+let orderStatus = new Layer ({
+  width: 375, height: 36,
+  parent: scroll.content,
+  image: 'images/Status.png',
+  y: 24,
+  x: -5,
+  opacity: 0
+});
+
+let loupe = new Layer ({
+  size: 16,
+  parent: orderStatus,
+  image: 'images/Loupe.png',
+  y: 4, x: 24,
+  rotation: 10
+});
+
+loupe.states = {
+  stateA: {
+    x: 24 - 1, y: 4 - 0,
+    rotation: 10,
+    animationOptions: {curve: 'linear', time: 1}
+  },
+  stateB: {
+    x: 24 - 0, y: 4 + 1,
+    rotation: 0,
+    animationOptions: {curve: 'linear', time: 1.4}
+  },
+  stateC: {
+    x: 24 + 1, y: 4 + 0,
+    rotation: -10,
+    animationOptions: {curve: 'linear', time: 1.2}
+  },
+  stateD: {
+    x: 24 + 0, y: 4 - 1,
+    rotation: 0,
+    animationOptions: {curve: 'linear', time: 1.2}
+  }
+};
+
+loupe.animate('stateB');
+
+loupe.onStateSwitchEnd(function() {
+  if (loupe.states.current.name == 'stateA') {
+    loupe.animate('stateB');
+  } else if (loupe.states.current.name == 'stateB') {
+    loupe.animate('stateC');
+  } else if (loupe.states.current.name == 'stateC') {
+    loupe.animate('stateD');
+  } else if (loupe.states.current.name == 'stateD') {
+    loupe.animate('stateA');
+  }
+});
+
+orderStatus.animate({
+  opacity: 1,
+  x: 0,
+  options: {
+    time: .6,
+    delay: 1.5
+  }
+})
 
 let header = new Layer ({
   width: 375, height: 90,
