@@ -193,34 +193,72 @@ let orderStatus = new Layer ({
   opacity: 0
 });
 
+orderStatus.states = {
+  statusA: {
+    opacity: 0,
+    x: -5 - 10,
+    animationOptions: {
+      curve: 'spring(300, 20, 0)'
+    }
+  },
+  statusB: {
+    opacity: 1,
+    x: 0,
+    animationOptions: {
+      curve: 'spring(300, 20, 0)',
+      delay: 2
+    }
+  },
+  statusC: {
+    opacity: 0,
+    x: 5 + 10,
+    animationOptions: {
+      curve: 'spring(300, 20, 0)',
+      delay: 6
+    }
+  }
+};
+
+orderStatus.animate('statusA');
+
+orderStatus.onStateSwitchEnd(function() {
+  if (orderStatus.states.current.name == 'statusA') {
+    orderStatus.animate('statusB');
+  } else if (orderStatus.states.current.name == 'statusB') {
+    orderStatus.animate('statusC');
+  } else if (orderStatus.states.current.name == 'statusC') {
+    orderStatus.animate('statusA');
+  };
+});
+
 let loupe = new Layer ({
   size: 16,
   parent: orderStatus,
   image: 'images/Loupe.png',
   y: 4, x: 24,
-  rotation: 10
+  rotation: 7
 });
 
 loupe.states = {
   stateA: {
     x: 24 - 1, y: 4 - 0,
-    rotation: 10,
-    animationOptions: {curve: 'linear', time: 1}
+    rotation: 7,
+    animationOptions: {curve: 'linear', time: .4}
   },
   stateB: {
     x: 24 - 0, y: 4 + 1,
     rotation: 0,
-    animationOptions: {curve: 'linear', time: 1.4}
+    animationOptions: {curve: 'linear', time: .2}
   },
   stateC: {
     x: 24 + 1, y: 4 + 0,
-    rotation: -10,
-    animationOptions: {curve: 'linear', time: 1.2}
+    rotation: 7,
+    animationOptions: {time: .2}
   },
   stateD: {
     x: 24 + 0, y: 4 - 1,
     rotation: 0,
-    animationOptions: {curve: 'linear', time: 1.2}
+    animationOptions: {curve: 'linear', time: 0.3}
   }
 };
 
@@ -237,15 +275,6 @@ loupe.onStateSwitchEnd(function() {
     loupe.animate('stateA');
   }
 });
-
-orderStatus.animate({
-  opacity: 1,
-  x: 0,
-  options: {
-    time: .6,
-    delay: 1.5
-  }
-})
 
 let header = new Layer ({
   width: 375, height: 90,
