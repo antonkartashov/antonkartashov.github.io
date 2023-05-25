@@ -2,13 +2,15 @@ let textStyle = {
   'font-size' : '12pt',
   'line-height' : '18pt',
   'margin-top' : '3px',
-  'font-family' : 'Roboto Mono'
+  'font-family' : 'Roboto Mono',
+  'font-weight' : '400'
 };
 
 let pageColor = new BackgroundLayer ({
   backgroundColor: 'tomato',
   backgroundColor: '#0a0a0a',
-  image: 'images/bg.jpg'
+  backgroundColor: '#000',
+  // image: 'images/bg.jpg'
 });
 
 let screen = new Layer ({
@@ -68,7 +70,7 @@ class Toggle extends Layer {
       },
       off: {
         x: 0,
-        backgroundColor: 'rgba(255, 255, 255, .5)',
+        backgroundColor: 'rgba(255, 255, 255, .1)',
         options: {time: .1}
       }
     };
@@ -124,7 +126,8 @@ class Tip extends Layer {
         'font-size' : '12pt',
         'line-height' : '18pt',
         'margin-top' : '3px',
-        'font-family' : 'Roboto Mono'
+        'font-family' : 'Roboto Mono',
+        'font-weight' : '400'
       },
       color: '#555',
       backgroundColor: '',

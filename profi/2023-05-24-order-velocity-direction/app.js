@@ -1,12 +1,13 @@
-let swipeToClose = true;
+let pullDown = true;
 
 
 
 scroll.content.onChange('y', function() {
 
-  /* Если Scroll Y не равен нулю */
+  /* Если Scroll Y не равен нулю, т.е. проскролено вниз */
+  /* Свай */
   if (Math.round(scroll.content.y) < 0) {
-    swipeToClose = false;
+    pullDown = false;
   };
 
   /* Анимация большого заголовка заказа */
@@ -18,53 +19,67 @@ scroll.content.onChange('y', function() {
 
   /* Описания, которые слева */
   if (Math.round(scroll.content.y) < 0) {
-    toggle.animate('on');
 
-    tipTop.props = {html: `
-      <p style='color: ${txtColors.blue}'>Скролл:</p>
-      <p style='color: ${txtColors.blue}'>${-Math.round(scroll.content.y)}</p>
-    `};
+    tipScroll.html = `
+      <p style='color: ${txtColors.red}'>scrollY:</p>
+      <p style='color: ${txtColors.red}'>${-Math.round(scroll.content.y)}</p>
+    `;
 
-    tipDrag.html= `<p style='color: ${txtColors.blue}'>Scroll</p>`;
+    tipPulldown.html = `
+      <p>orderSheet.y:</p>
+      <p>0</p>
+    `;
+
+    blockPulldown.animate('on');
+    blockPulldownLabel.color = txtColors.red;
+
+
   };
-
-  // print(`scroll.content.y: ${Math.round(scroll.content.y)}`);
-  // print(`atTheTop: ${atTheTop}, swipeToClose: ${swipeToClose}, scrollVertical: ${scroll.scrollVertical}`);
 
 });
 
 
-scroll.onScrollAnimationDidStart(function() {
+// scroll.onScrollAnimationDidStart(function() {
   // let textYellow = 'gold';
   // descInertia.html = `
   //   <p style='color: ${textYellow}'>Scroll Inertia</p>`
-});
+// });
 
 scroll.onScrollAnimationDidEnd(function() {
   if (Math.round(scroll.content.y) == 0) {
-    swipeToClose = true;
+    pullDown = true;
     scroll.scrollVertical = true;
 
     /* Описания, которые слева */
-    toggle.animate('off');
+    blockPulldown.animate('off');
+    blockPulldownLabel.color = txtColors.dark;
 
-    tipTop.props = {html: `
-      <p style='color: ${txtColors.red}'>Скролл:</p>
-      <p style='color: ${txtColors.red}'>0</p>
+    tipScroll.props = {html: `
+      <p>scrollY:</p>
+      <p>0</p>
     `};
 
-    tipDrag.html = `<p style='color: ${txtColors.red}'>Pull-down</p>`;
+    tipVelocity.props = {
+      color: txtColors.dark,
+      html: `
+        <p>drag.event.velocityY:</p>
+        <p>0</p>
+    `};
   };
 });
 
+
+
 scroll.content.onDrag(function(event) {
 
-  if (event.velocityY > 0 && swipeToClose) {
+  /* Если drag.event.velocityY направлена вниз, юзер пытается смахнуть шторку */
+  /* Блокируем скролл */
+  if (event.velocityY > 0 && pullDown) {
     scroll.scrollVertical = false;
   }
 
   /* Логика смахивания вниз */
-  if (swipeToClose) {
+  if (pullDown) {
 
     if (order.y >= 0) {
       order.y = event.point.y - event.start.y;
@@ -77,12 +92,48 @@ scroll.content.onDrag(function(event) {
       orderTitle.y = 124 + (event.point.y - event.start.y) / 8;
       orderTitle.opacity = 1 + (event.point.y - event.start.y) * 0.004;
     }
-
   };
+
+  /* Описания, которые слева */
+  let dir = '▲';
+
+  if (pullDown) {
+
+    blockScroll.animate('on');
+    blockScrollLabel.color = txtColors.blue;
+
+    tipPulldown.props = {
+      color: txtColors.blue,
+      html: `
+        <p>orderSheet.y:</p>
+        <p>${order.y}</p>
+    `};
+
+    tipVelocity.color = txtColors.blue;
+
+    if (event.velocityY > 0) {dir = `▼`}
+    else if (event.velocityY < 0) {dir = `▲`}
+    else if (event.velocityY == 0) {dir = ``};
+
+  } else {
+    tipVelocity.color = txtColors.red;
+
+    if (event.velocityY > 0) {dir = `▲`}
+    else if (event.velocityY < 0) {dir = `▼`}
+    else if (event.velocityY == 0) {dir = ``};
+  }
+
+  tipVelocity.html = `
+    <p'>drag.event.velocityY:</p>
+    <p'>${dir} ${Math.abs(Utils.round(event.velocityY, 3))}</p>
+  `;
 });
 
+
+
 scroll.content.onDragEnd(function() {
-  if (swipeToClose == true) {
+
+  if (pullDown == true) {
     order.animate({y: 0, options: {time: .5}});
     scroll.animate({y: 126, options: {time: .5}});
     scroll.scrollToTop();
@@ -93,9 +144,17 @@ scroll.content.onDragEnd(function() {
       options: {time: .5}
     });
 
-    swipeToClose = true;
+    pullDown = true;
     scroll.scrollVertical = true;
   };
+
+  /* Описания, которые слева */
+  tipVelocity.props = {
+    color: txtColors.dark,
+    html: `
+      <p>drag.event.velocityY:</p>
+      <p>0</p>
+  `};
 });
 
 
@@ -117,28 +176,23 @@ order.onChange('y', function() {
 
   /* Описания, которые слева */
   if (order.y > 0) {
-    tipTop.props = {html: `
-      <p'>Скролл:</p>
-      <p'>заблокирован</p>
-    `};
 
-    tipOrder.props = {html: `
-      <p style='color: ${txtColors.green}'>Шторка заказа:</p>
-      <p style='color: ${txtColors.green}'>${Math.round(order.y)}</p>
-    `};
+    tipPulldown.html = `
+      <p>orderSheet.y:</p>
+      <p>${Math.round(order.y)}</p>
+    `;
 
   } else {
-    tipTop.props = {html: `
-      <p style='color: ${txtColors.red}'>Скролл:</p>
-      <p style='color: ${txtColors.red}'>0</p>
+
+    blockScroll.animate('off');
+    blockScrollLabel.color = txtColors.dark;
+
+    tipPulldown.props = {
+      color: txtColors.dark,
+      html: `
+        <p>orderSheet.y:</p>
+        <p>${Math.round(order.y)}</p>
     `};
-
-    tipOrder.props = {html: `
-      <p>Шторка заказа:</p>
-      <p>${Math.round(order.y)}</p>
-    `};
-
-
   }
 });
 
@@ -155,45 +209,72 @@ let txtColors = {
   blue:   '#3498DB'
 };
 
+let opp = 1;
+// opp = 0;
+
 
 let tipScroll = new Tip ({
+  y: 40,
+  opacity: opp,
   color: txtColors.dark,
   html: `
-    <p style='color: ${txtColors.red}'>scrollY:</p>
-    <p style='color: ${txtColors.red}'>0</p>
+    <p>scrollY:</p>
+    <p>0</p>
+  `
+});
+
+let tipPulldown = new Tip ({
+  y: 110,
+  opacity: opp,
+  color: txtColors.dark,
+  html: `
+    <p>orderSheet.y:</p>
+    <p>0</p>
   `
 });
 
 let tipVelocity = new Tip ({
-  y: 120,
+  y: 180,
+  opacity: opp,
   color: txtColors.dark,
   html: `
-    <p'>drag.event.velocity.y:</p>
-    <p'>0</p>
-  `
-});
-
-let tipPullDown = new Tip ({
-  y: 205,
-  color: txtColors.dark,
-  html: `
-    <p'>orderSheet.y:</p>
+    <p'>drag.event.velocityY:</p>
     <p'>0</p>
   `
 });
 
 
 
-let toggle = new Toggle ({
-  x: 36, y: 335
+
+let blockScroll = new Toggle ({
+  x: 36, y: 300,
+  opacity: opp
 });
 
-toggle.knob.states.off.backgroundColor = txtColors.red;
-toggle.knob.states.on.backgroundColor = txtColors.blue;
-toggle.knob.stateSwitch('off');
+blockScroll.knob.states.on.backgroundColor = txtColors.blue;
+blockScroll.knob.stateSwitch('off');
 
-let tipFlag = new Tip ({
-  y: 335, x: 100,
+let blockScrollLabel = new Tip ({
+  x: 100, y: 300,
+  opacity: opp,
   color: txtColors.dark,
-  html: `<p style='color: ${txtColors.red}'>Pull-down</p>`
+  html: `<p>Scroll is blocked</p>`
+});
+
+
+
+
+let blockPulldown = new Toggle ({
+  x: 36, y: 350,
+  opacity: opp
+});
+
+blockPulldown.knob.states.on.backgroundColor = txtColors.red;
+blockPulldown.knob.stateSwitch('off');
+
+let blockPulldownLabel = new Tip ({
+  x: 100, y: 350,
+  opacity: opp,
+  color: txtColors.dark,
+  html: `<p>Pull-down is blocked</p>`
 });
