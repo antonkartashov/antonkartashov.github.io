@@ -1,6 +1,7 @@
+let opp = 1;
+// opp = 0;
+
 let pullDown = true;
-
-
 
 scroll.content.onChange('y', function() {
 
@@ -32,8 +33,6 @@ scroll.content.onChange('y', function() {
 
     blockPulldown.animate('on');
     blockPulldownLabel.color = txtColors.red;
-
-
   };
 
 });
@@ -209,10 +208,6 @@ let txtColors = {
   green:  '#27AE60',
   blue:   '#3498DB'
 };
-
-let opp = 1;
-// opp = 0;
-
 
 let tipScroll = new Tip ({
   y: 40,

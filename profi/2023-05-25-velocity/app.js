@@ -94,6 +94,7 @@ sheet.onTouchEnd(function(){
 let breakpointLayer = new Layer ({
     width: 1000,
     height: 2,
+    borderRadius: 10,
     backgroundColor: 'rgba(255, 0, 0, .8)',
     x: Align.center(),
     y: 600,
