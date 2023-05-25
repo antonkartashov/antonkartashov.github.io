@@ -204,6 +204,7 @@ order.onChange('y', function() {
 
 let txtColors = {
   dark:   '#333',
+  dark:   '#888',
   red:    'tomato',
   green:  '#27AE60',
   blue:   '#3498DB'

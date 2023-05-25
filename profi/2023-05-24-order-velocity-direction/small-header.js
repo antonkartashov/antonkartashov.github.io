@@ -10,11 +10,11 @@ let smallOrderStatus = new Layer({
 smallOrderStatus.states = {
   on: {
     y: 76, opacity: 1,
-    animationOptions: {time: .6, delay: .15}
+    animationOptions: {time: .15, delay: .15}
   },
   off: {
     y: 66, opacity: 0,
-    animationOptions: {time: .6}
+    animationOptions: {time: .15}
   },
 };
 
@@ -31,11 +31,11 @@ let smallOrderTitle = new Layer({
 smallOrderTitle.states = {
   on: {
     y: 76, opacity: 1,
-    animationOptions: {time: .6, delay: .15}
+    animationOptions: {time: .15, delay: .15}
   },
   off: {
     y: 86, opacity: 0,
-    animationOptions: {time: .6}
+    animationOptions: {time: .15}
   },
 };
 
