@@ -194,40 +194,38 @@ let orderStatus = new Layer ({
 });
 
 orderStatus.states = {
-  statusA: {
-    opacity: 0,
-    x: -5 - 10,
+  hiddenAtLeft: {
+    x: -15, opacity: 0,
     animationOptions: {
-      curve: 'spring(300, 20, 0)'
+      time: .6 // Выезжает слева
     }
   },
-  statusB: {
-    opacity: 1,
-    x: 0,
+  unhidden: {
+    x: 0, opacity: 1,
     animationOptions: {
-      curve: 'spring(300, 20, 0)',
-      delay: 2
+      time: .6,
+      // delay: 2
     }
   },
-  statusC: {
+  hiddenAtRight: {
     opacity: 0,
-    x: 5 + 10,
+    x: 15,
     animationOptions: {
-      curve: 'spring(300, 20, 0)',
-      delay: 6
+      time: .6,
+      delay: 6 // Шесть сек. висит, потом исчезает
     }
   }
 };
 
-orderStatus.animate('statusA');
+orderStatus.animate('hiddenAtLeft');
 
 orderStatus.onStateSwitchEnd(function() {
-  if (orderStatus.states.current.name == 'statusA') {
-    orderStatus.animate('statusB');
-  } else if (orderStatus.states.current.name == 'statusB') {
-    orderStatus.animate('statusC');
-  } else if (orderStatus.states.current.name == 'statusC') {
-    orderStatus.animate('statusA');
+  if (orderStatus.states.current.name == 'hiddenAtLeft') {
+    orderStatus.animate('unhidden');
+  } else if (orderStatus.states.current.name == 'unhidden') {
+    orderStatus.animate('hiddenAtRight');
+  } else if (orderStatus.states.current.name == 'hiddenAtRight') {
+    orderStatus.animate('hiddenAtLeft');
   };
 });
 
@@ -243,22 +241,22 @@ loupe.states = {
   stateA: {
     x: 24 - 1, y: 4 - 0,
     rotation: 7,
-    animationOptions: {curve: 'linear', time: .4}
+    animationOptions: {curve: 'linear', time: .7}
   },
   stateB: {
     x: 24 - 0, y: 4 + 1,
     rotation: 0,
-    animationOptions: {curve: 'linear', time: .2}
+    animationOptions: {curve: 'linear', time: .5}
   },
   stateC: {
     x: 24 + 1, y: 4 + 0,
     rotation: 7,
-    animationOptions: {time: .2}
+    animationOptions: {time: .6}
   },
   stateD: {
     x: 24 + 0, y: 4 - 1,
     rotation: 0,
-    animationOptions: {curve: 'linear', time: 0.3}
+    animationOptions: {curve: 'linear', time: 0.6}
   }
 };
 
