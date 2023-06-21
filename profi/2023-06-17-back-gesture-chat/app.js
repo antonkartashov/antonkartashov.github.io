@@ -55,10 +55,33 @@ let blackout = new Layer ({
 });
 
 let secondaryScreen = new Layer ({
-  image: 'images/Chat.png',
+  backgroundColor: 'white',
   parent: screen,
   width: 375, height: 812
 });
+
+let navigationBar = new Layer ({
+  parent: secondaryScreen,
+  y: 56,
+  width: 375, height: 40.5,
+  image: 'images/Navigation-Bar.png'
+});
+
+let bubbles = new Layer ({
+  parent: secondaryScreen,
+  x: 24, y: 116,
+  width: 290, height: 320,
+  image: 'images/Bubbles.jpg'
+});
+
+let bottomBar = new Layer ({
+  parent: secondaryScreen,
+  y: Align.bottom(-34),
+  width: 375, height: 48.5,
+  image: 'images/Bottom-Bar.png'
+});
+
+
 
 
 
