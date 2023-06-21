@@ -30,12 +30,10 @@ class StatusBar extends Layer {
         this.height = 20;
         this.states = {
           white: {
-            image: 'images/Status-Bar/status-bar-iphoneSE-white.png',
-            options: {time: .3, delay: .3}
+            image: 'images/status-bar-iphoneSE-white.png'
           },
           black: {
-            image: 'images/Status-Bar/status-bar-iphoneSE-black.png',
-            options: {time: .3, delay: .3}
+            image: 'images/status-bar-iphoneSE-black.png'
           }
         }
         break;
@@ -44,12 +42,10 @@ class StatusBar extends Layer {
         this.height = 44;
         this.states = {
           white: {
-            image: 'images/Status-Bar/status-bar-iphoneX-white.png',
-            options: {time: .3, delay: .3}
+            image: 'images/status-bar-iphoneX-white.png'
           },
           black: {
-            image: 'images/Status-Bar/status-bar-iphoneX-black.png',
-            options: {time: .3, delay: .3}
+            image: 'images/status-bar-iphoneX-black.png'
           }
         }
         break;
@@ -58,12 +54,10 @@ class StatusBar extends Layer {
         this.height = 56;
         this.states = {
           white: {
-            image: 'images/Status-Bar/status-bar-iphone14-white.png',
-            options: {time: .3, delay: .3}
+            image: 'images/status-bar-iphone14-white.png'
           },
           black: {
-            image: 'images/Status-Bar/status-bar-iphone14-black.png',
-            options: {time: .3, delay: .3}
+            image: 'images/status-bar-iphone14-black.png'
           }
         }
         break;

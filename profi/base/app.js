@@ -10,16 +10,10 @@ let screen = new Layer ({
   y: Align.center(),
   scale: Screen.height / 812 * 0.9,
   // scale: 1, y: 50,
-  backgroundColor: 'white',
-  clip: true,
-  borderRadius: 40
-});
-
-let background = new Layer ({
   backgroundColor: '#818187',
   backgroundColor: 'tomato',
-  width: 375, height: 812,
-  parent: screen
+  clip: true,
+  borderRadius: 40
 });
 
 
