@@ -39,6 +39,19 @@ let layer = new Layer({
   parent: scroll.content
 });
 
+let gradient = new Layer({
+  parent: screen,
+  width: 375, height: 200,
+  image: 'images/gradient.png',
+  y: 812 - 200
+})
+
+gradient.states = {
+  'big': {y: 812 - 200, opacity: 1},
+  'small': {y: 812, opacity: 0},
+  animationOptions: {time: .5}
+}
+
 let tsuz = new Layer({
   parent: screen,
   x: 69, y: Align.bottom(-34),
@@ -100,13 +113,15 @@ scroll.content.onMove(function(e) {
     tsuz.animate('small');
     tsuzText.animate('small');
     tsuzIcon.animate('small');
+    gradient.animate('small');
   }
 
-  if ((direction == 'up' && index == 10) || (scroll.content.y >= -20)) {
+  if ((direction == 'up' && index == 30) || (scroll.content.y >= -20)) {
     if (tsuz.states.current.name != 'big') {
       tsuz.animate('big');
       tsuzText.animate('big');
       tsuzIcon.animate('big');
+      gradient.animate('big');
     }
   }
 })
