@@ -155,7 +155,7 @@ dragArea.onDragMove(function(dragMoveEvent) {
 
 let endAnimationOptions = {
   // time: 10
-  curve: "spring(100, 28, 0)"
+  curve: "spring(250, 28, 0)"
 };
 
 dragArea.onDragEnd(function(dragEndEvent) {
@@ -168,7 +168,7 @@ dragArea.onDragEnd(function(dragEndEvent) {
 
   blackout.animate({
     opacity: 0,
-    options: {time: 2}
+    options: {time: 1}
   });
 
   wrap.animate({

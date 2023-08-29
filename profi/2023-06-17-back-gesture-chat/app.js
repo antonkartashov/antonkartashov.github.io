@@ -155,7 +155,7 @@ dragArea.onDragMove(function(dragMoveEvent) {
 
 
 let endAnimationOptions = {
-  curve: "spring(100, 28, 0)"
+  curve: "spring(350, 38, 0)"
 };
 
 dragArea.onDragEnd(function(dragEndEvent) {
@@ -171,15 +171,15 @@ dragArea.onDragEnd(function(dragEndEvent) {
 
   blackout.animate({
     opacity: 0,
-    options: endAnimationOptions
+    options: {time: 1}
   });
 
-  let velocityX = Math.round(dragEndEvent.velocity.x * 100);
+  let velocityX = 2 * Math.round(dragEndEvent.velocity.x * 100);
 
   if (velocityX < 10) {velocityX = 1};
   if (velocityX > 100) {velocityX = 100};
 
-  let velocityY = Math.round(dragEndEvent.velocity.y * 100);
+  let velocityY = 2 * Math.round(dragEndEvent.velocity.y * 100);
 
   if (velocityY < 10) {velocityY = 1};
   if (velocityY > 100) {velocityY = 100};
