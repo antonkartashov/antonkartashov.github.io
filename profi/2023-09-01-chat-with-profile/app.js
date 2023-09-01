@@ -43,8 +43,9 @@ let header = new Layer ({
 
 let divider = new Layer ({
   parent: screen,
-  image: 'images/divider.png',
-  width: 375, height: 1,
+  // image: 'images/divider.png',
+  width: 375, height: .5,
+  backgroundColor: 'rgba(0, 0, 0, .15)',
   y: 338
 });
 
