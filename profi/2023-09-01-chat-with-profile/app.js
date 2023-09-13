@@ -35,6 +35,15 @@ let white = new Layer ({
   opacity: 0
 });
 
+white.states = {
+  'off': {
+    opacity: 0
+  },
+  'on': {
+    opacity: 1
+  }
+};
+
 let header = new Layer ({
   width: 375, height: 146,
   image: 'images/header.png',
@@ -52,10 +61,21 @@ let divider = new Layer ({
 let name = new Layer ({
   parent: screen,
   width: 375, height: 58,
-  y: 88, x: 0,
+  y: 88 + 20, x: 0,
   opacity: 0,
   image: 'images/name.png'
 });
+
+name.states = {
+  'off': {
+    y: 88 + 20, opacity: 0
+  },
+  'on': {
+    y: 88, opacity: 1
+  }
+};
+
+name.animate('off');
 
 // name.states = {
 //   'on': {
@@ -71,16 +91,24 @@ let name = new Layer ({
 // name.animate('off');
 
 scroll.content.onMove(function() {
-  if (scroll.content.y > -192) {
+  if (scroll.content.y > -140) {
     divider.y = Utils.modulate(scroll.content.y, [0, -192], [338, 146]);
-    white.opacity = Utils.modulate(scroll.content.y, [-110, -160], [0, 1]);
+    // white.opacity = Utils.modulate(scroll.content.y, [-110, -160], [0, 1]);
     white.y = Utils.modulate(scroll.content.y, [0, -192], [0, -192]);
-    name.opacity = Utils.modulate(scroll.content.y, [-130, -180], [0, 1]);
+    // name.opacity = Utils.modulate(scroll.content.y, [-130, -180], [0, 1]);
+    if (name.states.current.name == 'on') {
+      name.animate('off');
+      white.animate('off');
+    }
   } else {
     divider.y = 146;
-    white.opacity = 1;
+    // white.opacity = 1;
     white.y = -192;
-    name.opacity = 1;
+    // name.opacity = 1;
+    if (name.states.current.name == 'off') {
+      name.animate('on');
+      white.animate('on');
+    }
   };
 
   // if (scroll.content.y < -170) {
