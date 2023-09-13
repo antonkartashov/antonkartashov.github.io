@@ -32,15 +32,18 @@ let white = new Layer ({
   parent: screen,
   width: 375, height: 338,
   backgroundColor: 'white',
+  // backgroundColor: 'red',
   opacity: 0
 });
 
 white.states = {
   'off': {
-    opacity: 0
+    opacity: 0,
+    animationOptions: {time: .5, delay: 0.25}
   },
   'on': {
-    opacity: 1
+    opacity: 1,
+    animationOptions: {time: .5, delay: 0}
   }
 };
 
@@ -68,10 +71,12 @@ let name = new Layer ({
 
 name.states = {
   'off': {
-    y: 88 + 20, opacity: 0
+    y: 88 + 20, opacity: 0,
+    animationOptions: {time: .5, delay: 0}
   },
   'on': {
-    y: 88, opacity: 1
+    y: 88, opacity: 1,
+    animationOptions: {time: .5, delay: 0.25}
   }
 };
 
@@ -91,19 +96,29 @@ name.animate('off');
 // name.animate('off');
 
 scroll.content.onMove(function() {
-  if (scroll.content.y > -140) {
-    divider.y = Utils.modulate(scroll.content.y, [0, -192], [338, 146]);
+  if (scroll.content.y > -198) {
+    divider.y = Utils.modulate(scroll.content.y, [0, -198], [338, 146]);
     // white.opacity = Utils.modulate(scroll.content.y, [-110, -160], [0, 1]);
-    white.y = Utils.modulate(scroll.content.y, [0, -192], [0, -192]);
+    white.y = Utils.modulate(scroll.content.y, [0, -198], [0, -198]);
+  } else {
+    divider.y = 146;
+    // white.opacity = 1;
+    white.y = -198;
+  }
+
+  if (scroll.content.y > -140) {
+    // divider.y = Utils.modulate(scroll.content.y, [0, -198], [338, 146]);
+    // white.opacity = Utils.modulate(scroll.content.y, [-110, -160], [0, 1]);
+    // white.y = Utils.modulate(scroll.content.y, [0, -198], [0, -140]);
     // name.opacity = Utils.modulate(scroll.content.y, [-130, -180], [0, 1]);
     if (name.states.current.name == 'on') {
       name.animate('off');
       white.animate('off');
     }
   } else {
-    divider.y = 146;
+    // divider.y = 146;
     // white.opacity = 1;
-    white.y = -192;
+    // white.y = -140;
     // name.opacity = 1;
     if (name.states.current.name == 'off') {
       name.animate('on');
