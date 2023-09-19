@@ -66,7 +66,7 @@ loader = new Layer({
   backgroundColor: 'red'
 })
 
-let borderline = 120;
+let borderline = 150;
 
 scroll.content.onMove(function() {
   // print(scroll.content.y);
