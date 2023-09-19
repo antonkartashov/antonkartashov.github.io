@@ -40,15 +40,23 @@ scroll = new ScrollComponent ({
 });
 
 for (let i = 0; i < 4; i++) {
-  new Layer ({
+  let layer = new Layer ({
     parent: scroll.content,
     y: i * 205 + 100,
-    backgroundColor: Utils.randomColor(),
-    opacity: .5,
+    backgroundColor: '#eee',
     width: 375 - 20,
     x: 10,
     borderRadius: 20
   });
+
+  if (i == 0) {
+    layer.html = '<p>Pull to close<br>↓</p>';
+    layer.style = {
+        'color': 'black',
+        'text-align': 'center',
+        'padding-top': '70px'
+    };
+  }
 };
 
 loader = new Layer({
