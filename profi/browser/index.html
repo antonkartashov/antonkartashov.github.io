@@ -23,6 +23,7 @@
 		}
 
 		body {
+			overflow: hidden;
 			background: black url('images/background.png')
 				repeat scroll top left;
 			font: 28px/1em "Helvetica";
@@ -40,5 +41,10 @@
 	<body>
 		<script src="framer/framer.js"></script>
 		<script src="app.js"></script>
+		<script>
+		window.onscroll = function () {
+			window.scrollTo(0,0);
+		}
+		</script>
 	</body>
 </html>
